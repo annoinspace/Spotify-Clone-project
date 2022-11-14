@@ -28,10 +28,12 @@
         <div class="page-content">
           <div class="content-wrapper">
             <div id="album-header">
-              <!-- nav bad with arrows -->
+              <!-- nav bar with arrows -->
               <div id="album-nav-top" class="container border">
-                <div class="row">
-                  <div class="col-lg-6 d-flex flex-direction-row">
+                <div class="row flex-nowrap">
+                  <div
+                    class="col-sm-6 col-md-6 col-lg-6 d-flex flex-direction-row"
+                  >
                     <span class="arrow arrow-back flex-center"
                       ><ion-icon name="chevron-back-outline"></ion-icon>
                     </span>
@@ -39,14 +41,32 @@
                       ><ion-icon name="chevron-forward-outline"></ion-icon>
                     </span>
                   </div>
-                  <div class="col-lg-6 d-flex justify-content-end">
+                  <div
+                    class="col-sm-6 col-md-6 col-lg-6 d-flex justify-content-end"
+                  >
                     <span id="user">user info</span>
                   </div>
                 </div>
               </div>
-              <div id="album-jumbotron"></div>
+              <!-- jumbotron with album image -->
+              <div id="album-jumbotron" class="container mt-4 border">
+                <div class="row">
+                  <div class="col"></div>
+                </div>
+              </div>
             </div>
-            <div id="album-content"></div>
+            <!-- album content with songs playing -->
+            <div id="album-content">
+              <div id="play-section" class="container border">
+                <div class="row">
+                  <div class="col"></div>
+                </div>
+              </div>
+              <div id="album-table" class="container border mt-3">
+                <div class="row">
+                    <div class="col"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
