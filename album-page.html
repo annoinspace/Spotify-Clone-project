@@ -14,15 +14,21 @@
     <title>Spotify Album Page</title>
   </head>
   <body>
-    <div class="main-body-container">
-      <div class="navigation-container border">
-        <img
-          id="spotify-logo"
-          src="./assets/Spotify_Logo_RGB_White.png"
-          alt="spotify logo"
-        />
+    <div class="page-container">
+      <div class="main-body-container">
+        <!-- navigation bar container -->
+        <div class="navigation-container">
+          <img
+            id="spotify-logo"
+            src="./assets/Spotify_Logo_RGB_White.png"
+            alt="spotify logo"
+          />
+        </div>
+        <!-- main page content container -->
+        <div class="page-content flex-grow-1"></div>
       </div>
-      <div class="page-content flex-grow-1 border">wrgvWBR</div>
+      <!-- current song bar container -->
+      <div id="currently-playing"></div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
