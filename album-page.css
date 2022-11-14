@@ -61,10 +61,33 @@ body {
   margin: 0;
   max-width: 100%;
 }
+
 #album-jumbotron {
+  padding: 1vh;
   margin: 0;
   max-width: 100%;
-  height: 19vh;
+  height: 25vh;
+}
+
+#jumbotron-album-content {
+  padding: 1vh;
+  max-width: 100%;
+}
+
+#jumbotron-album-img {
+  padding: 1vh;
+  /* max-width: 170px; */
+  max-height: 220px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+#album-img {
+  height: 300px;
+  object-fit: cover;
+}
+#jumbotron-album-text {
+  flex-grow: 1;
 }
 
 .arrow {
@@ -92,11 +115,9 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   flex-grow: 1;
   max-width: 100%;
-  padding: 1vh;
 }
 
 #play-section {
-  padding: 1vh;
   max-width: 100%;
   height: 10vh;
 }
