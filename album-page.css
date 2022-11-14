@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh width 100vw;
+  color: white;
+  background-color: black;
+}
+
+.spotify-green {
+  background-color: #1db954;
+}
+
+.main-body-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.page-content {
+  height: 100vh;
+  background-image: linear-gradient(red, black, black);
+  flex-grow: 1;
+}
+.content-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation-container {
+  height: 100vh;
+}
+
+.border {
+  border: 1px solid white;
+}
+
+#currently-playing {
+  height: 80px;
+  width: 100%;
+  border-top: 1px solid rgb(61, 61, 61);
+  background-color: black;
+  position: fixed;
+  bottom: 0px;
+}
+
+#spotify-logo {
+  height: 85px;
+  padding: 25px 75px 25px 25px;
+}
+
+#album-header {
+  height: 30vh;
+  padding: 1vh;
+}
+
+#album-nav-top {
+  margin: 0;
+  max-width: 100%;
+}
+#album-jumbotron {
+  margin: 0;
+  max-width: 100%;
+  height: 19vh;
+}
+
+.arrow {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.arrow-back {
+  padding-right: 6px;
+}
+.arrow-forward {
+  padding-left: 6px;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#album-content {
+  background-color: rgba(0, 0, 0, 0.4);
+  flex-grow: 1;
+  max-width: 100%;
+  padding: 1vh;
+}
+
+#play-section {
+  padding: 1vh;
+  max-width: 100%;
+  height: 10vh;
+}
+
+#album-table {
+  padding: 1vh;
+  max-width: 100%;
+  height: 100%;
+}
+
+.table-row {
+  display: flex;
+}
+
+.title-header {
+  flex-grow: 1;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.track {
+  margin-inline: 10px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.track-name {
+  flex-grow: 1;
+}
+
+ion-icon {
+  font-size: 25px;
+}
