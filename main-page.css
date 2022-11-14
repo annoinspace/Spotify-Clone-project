@@ -6,7 +6,9 @@
   font-family: "GothamBold";
   src: url(fonts/Gotham-Bold.otf);
 }
-
+body {
+  background-color: #121212;
+}
 /*SIDEBAR SECTION*/
 .navbar.fixed-left {
   position: fixed;
@@ -99,7 +101,7 @@ hr {
 .playlist-link {
   color: #80828d;
   overflow: hidden;
-  white-space: nowrap; /* Don't forget this one */
+  white-space: nowrap;
   text-overflow: ellipsis;
   transition: 0.3s;
 }
@@ -129,3 +131,10 @@ hr {
   background: #808080;
 }
 /* End of scrollbar */
+
+/*MAIN PAGE SECTION*/
+#left,
+#right {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+}
