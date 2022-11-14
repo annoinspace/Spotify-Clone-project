@@ -27,7 +27,25 @@
         <!-- main page content container -->
         <div class="page-content">
           <div class="content-wrapper">
-            <div id="album-jumbotron"></div>
+            <div id="album-header">
+              <!-- nav bad with arrows -->
+              <div id="album-nav-top" class="container border">
+                <div class="row">
+                  <div class="col-lg-6 d-flex flex-direction-row">
+                    <span class="arrow arrow-back flex-center"
+                      ><ion-icon name="chevron-back-outline"></ion-icon>
+                    </span>
+                    <span class="arrow arrow-forward flex-center"
+                      ><ion-icon name="chevron-forward-outline"></ion-icon>
+                    </span>
+                  </div>
+                  <div class="col-lg-6 d-flex justify-content-end">
+                    <span id="user">user info</span>
+                  </div>
+                </div>
+              </div>
+              <div id="album-jumbotron"></div>
+            </div>
             <div id="album-content"></div>
           </div>
         </div>
@@ -35,6 +53,14 @@
       <!-- current song bar container -->
       <div id="currently-playing"></div>
     </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
