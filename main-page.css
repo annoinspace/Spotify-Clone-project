@@ -82,11 +82,10 @@ ul {
 }
 
 hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   border: 0;
   border-top: 1px solid #80828d;
-  width: 210px;
+  width: 180px;
+  margin-left: 1vw;
 }
 
 .playlists {
