@@ -1,0 +1,44 @@
+/*SIDEBAR SECTION*/
+.navbar.fixed-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 260px;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  background-color: black;
+}
+
+#logo {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+}
+
+#navbar-logos {
+  filter: invert(53%) sepia(7%) saturate(486%) hue-rotate(193deg)
+    brightness(95%) contrast(85%);
+  width: 2vw;
+  height: 2vh;
+}
+
+.navbar.fixed-left .navbar-collapse .navbar-nav a {
+  color: #80828d !important;
+  transition: 0.3s;
+}
+
+.navbar.fixed-left .navbar-collapse .navbar-nav a:hover {
+  color: white !important;
+}
+
+.navbar.fixed-left .navbar-brand {
+  padding-top: 2vh;
+  padding-bottom: 3vh;
+  padding-left: 2vw;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 1vw;
+}
