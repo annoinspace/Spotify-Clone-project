@@ -91,11 +91,17 @@ hr {
 
 .playlists {
   margin-left: 1vw;
+  width: 200px;
   cursor: pointer;
+  overflow-y: scroll;
+  height: 58vh;
 }
 
 .playlist-link {
   color: #80828d;
+  overflow: hidden;
+  white-space: nowrap; /* Don't forget this one */
+  text-overflow: ellipsis;
   transition: 0.3s;
 }
 .playlist-link:hover {
@@ -106,3 +112,21 @@ hr {
   position: absolute;
   bottom: 2vh;
 }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4d4d4d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #808080;
+}
+/* End of scrollbar */
