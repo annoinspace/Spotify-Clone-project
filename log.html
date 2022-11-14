@@ -95,9 +95,10 @@
                 <span class="span-text">Or</span>
                 <hr class="horizontal" />
               </div>
+
               <div class="log-form">
                 <div class="email-form">
-                  <div class="label-group">
+                  <div class="label-group" id="label">
                     <label for="login-username" class="label"
                       >Email address or username</label
                     >
@@ -105,17 +106,19 @@
                   <input
                     type="text"
                     id="login-username"
+                    name="username"
                     placeholder="email address or username"
                     class="log-input"
                   />
                 </div>
                 <div class="email-form">
-                  <div class="label-group">
+                  <div class="label-group" id="label">
                     <label for="login-password" class="label">Password</label>
                   </div>
                   <input
-                    type="text"
+                    type="password"
                     id="login-password"
+                    name="passsword"
                     placeholder="Password"
                     class="log-input"
                   />
@@ -141,7 +144,12 @@
                     </div>
                   </div>
                   <div class="log-btn">
-                    <button class="enter">
+                    <button
+                      class="enter"
+                      type="submit"
+                      id="loginCont"
+                      onclick="validate()"
+                    >
                       <div class="textBtn">
                         <p class="type">LOG IN</p>
                       </div>
@@ -153,7 +161,11 @@
               <hr class="secondLine" />
               <div class="footer">
                 <p class="log-text">Don`t have an account?</p>
-                <button id="sign-link" class="btn">
+                <button
+                  id="sign-link"
+                  class="btn"
+                  onclick="window.location.href='https://www.spotify.com/de/signup'"
+                >
                   <p class="p-text" id="google">Sign up for Spotify</p>
                 </button>
               </div>

@@ -212,7 +212,9 @@ div {
   box-shadow: inset 0 0 0 1px var(--essential-subdued, #878787);
   color: var(--text-base, #000000);
 }
-
+input[type="password" i] {
+  --webkit-text-security: disc !important;
+}
 .link {
   box-sizing: border-box;
   font-family: spotify-circular, Helvetica, Arial, sans-serif;
@@ -371,11 +373,14 @@ input:checked + label .tick::after {
   position: relative;
   background-color: var(--background-base, #1ed760);
   color: var(--text-base, #000000);
-  border-radius: 500px;
+  border-radius: 50px;
   font-size: inherit;
   padding: 14px 32px;
 }
-
+.textBtn:hover {
+  font-size: 110%;
+  cursor: pointer;
+}
 .type {
   box-sizing: border-box;
   font-family: spotify-circular, Helvetica, Arial, sans-serif;
