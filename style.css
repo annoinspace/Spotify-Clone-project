@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "GothamBlack";
+  src: url(fonts/Gotham-Black.otf);
+}
+@font-face {
+  font-family: "GothamBold";
+  src: url(fonts/Gotham-Bold.otf);
+}
+
 /*SIDEBAR SECTION*/
 .navbar.fixed-left {
   position: fixed;
@@ -14,6 +23,15 @@
 #logo {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
     contrast(103%);
+}
+
+.navbar-brand {
+  font-family: "GothamBlack";
+  color: white;
+}
+
+#navbarNavAltMarkup > div > ul > li > a {
+  font-family: "GothamBold";
 }
 
 #navbar-logos {
