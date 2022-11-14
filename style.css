@@ -30,6 +30,10 @@
   color: white;
 }
 
+.navbar-brand:hover {
+  color: white;
+}
+
 #HomeSearchLibrary > li > a {
   font-family: "GothamBold";
 }
@@ -83,6 +87,19 @@ hr {
   border: 0;
   border-top: 1px solid #80828d;
   width: 210px;
+}
+
+.playlists {
+  margin-left: 1vw;
+  cursor: pointer;
+}
+
+.playlist-link {
+  color: #80828d;
+  transition: 0.3s;
+}
+.playlist-link:hover {
+  color: white;
 }
 
 .navbar.fixed-left .navbar-collapse .navbar-nav #install-app {
