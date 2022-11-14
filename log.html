@@ -32,7 +32,7 @@
         <div class="main">
           <div class="middle">
             <div class="log-container">
-              <p id="log-text">To continue, log in to Spotify.</p>
+              <p class="log-text">To continue, log in to Spotify.</p>
               <button class="btn" id="firstButton">
                 <p class="p-text">
                   <svg
@@ -63,7 +63,7 @@
                   Continue with Apple
                 </p>
               </button>
-              <button class="btn" id="thirsBtn">
+              <button class="btn" id="thirdBtn">
                 <p class="p-text" id="google">
                   <img
                     src="./assets/icons8-google-48.png"
@@ -74,6 +74,71 @@
                   Continue with Google
                 </p>
               </button>
+              <div class="line">
+                <hr class="horizontal" />
+                <span class="span-text">Or</span>
+                <hr class="horizontal" />
+              </div>
+              <div class="log-form">
+                <div class="email-form">
+                  <div class="label-group">
+                    <label for="login-username" class="label"
+                      >Email address or username</label
+                    >
+                  </div>
+                  <input
+                    type="text"
+                    id="login-username"
+                    placeholder="email address or username"
+                    class="log-input"
+                  />
+                </div>
+                <div class="email-form">
+                  <div class="label-group">
+                    <label for="login-password" class="label">Password</label>
+                  </div>
+                  <input
+                    type="text"
+                    id="login-password"
+                    placeholder="Password"
+                    class="log-input"
+                  />
+                </div>
+                <a id="reset-password-link" class="link"
+                  >Forgot your password?</a
+                >
+                <div class="one">
+                  <div class="two">
+                    <div class="three">
+                      <input
+                        type="checkbox"
+                        id="log-remember"
+                        class="remember"
+                        placeholder="#"
+                      />
+                      <label for="log-remember" class="label-remember">
+                        <span class="tick"></span>
+                        <span class="label-text"
+                          ><p class="me">Remember me</p></span
+                        ></label
+                      >
+                    </div>
+                  </div>
+                  <div class="log-btn">
+                    <button class="enter">
+                      <div class="textBtn">
+                        <p class="type">LOG IN</p>
+                      </div>
+                      <div class="buttonFocus"></div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <hr class="secondLine" />
+              <div class="footer">
+                <p class="log-text">Don`t have an account?</p>
+                <button></button>
+              </div>
             </div>
           </div>
         </div>
