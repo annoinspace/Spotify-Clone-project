@@ -27,11 +27,6 @@ div {
   padding: 0px 0px 6px;
 }
 
-.logo {
-  fill: var(--decorative-base, #000000);
-  stroke: transparent;
-}
-
 .main {
   flex: 3 1 0%;
   display: flex;
@@ -51,6 +46,7 @@ div {
   row-gap: 10px;
 }
 #log-text {
+  font-weight: 700;
 }
 .log-text {
   text-align: center;
@@ -65,30 +61,25 @@ div {
 
 .btn {
   display: inline-flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
   justify-content: center;
   box-sizing: border-box;
-  font-family: spotify-circular, Helvetica, Arial, sans-serif;
-  --webkit-tap-highlight-color: transparent;
-  font-size: 14px;
-  font-weight: 700;
   border-radius: 50px;
-  text-align: center;
-  text-decoration: none;
   touch-action: manipulation;
   transition-duration: 33ms;
   transition-property: background-color, border-color, color, box-shadow, filter,
     transform;
-  --user-select: none;
-  vertical-align: middle;
   transform: translate3d(0px, 0px, 0px);
-  padding: 2px 30px;
+  padding: 10px 30px;
   position: relative;
   border: 1px solid var(--essential-subdued, #878787);
   width: 100%;
   cursor: pointer;
+}
+.btn:hover {
+  border-color: var(--essential-base, #000000);
+}
+.img {
+  vertical-align: bottom;
 }
 
 #firstButton {
@@ -98,13 +89,19 @@ div {
 }
 
 .p-text {
-  display: flex;
-  flex-direction: row;
-  column-gap: 10px;
-  -webkit-box-align: center;
-  align-items: center;
-  color: rgba(255, 255, 255, 0.9);
-  text-transform: uppercase;
+  box-sizing: border-box;
+  font-family: spotify-circular, Helvetica, Arial, sans-serif;
+  --webkit-tap-highlight-color: transparent;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+
+  font-weight: 700;
+}
+
+#google {
+  color: var(--text-subdued, #6a6a6a);
 }
 
 .facebook-logo {
@@ -136,10 +133,6 @@ div {
   border-radius: 500px;
   border: 3px solid transparent;
   content: "";
-}
-
-#google {
-  color: black;
 }
 
 .line {
@@ -270,6 +263,10 @@ div {
   display: flex;
   position: relative;
   cursor: default;
+}
+
+input:not(:checked) + label .tick {
+  border: 1px solid var(--essential-subdued, #878787);
 }
 
 input:checked + label .tick {
@@ -407,4 +404,8 @@ input:checked + label .tick::after {
   margin: 12px 0px 20px;
   flex: 1 1 0%;
   border-top: 1px solid rgb(217, 218, 220);
+}
+
+#sign-link {
+  margin-top: 1.5em;
 }

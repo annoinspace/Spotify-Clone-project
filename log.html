@@ -32,7 +32,9 @@
         <div class="main">
           <div class="middle">
             <div class="log-container">
-              <p class="log-text">To continue, log in to Spotify.</p>
+              <p class="log-text" id="log-text">
+                To continue, log in to Spotify.
+              </p>
               <button class="btn" id="firstButton">
                 <p class="p-text">
                   <svg
@@ -41,7 +43,7 @@
                     height="24"
                     width="24"
                     viewBox="0 0 24 24"
-                    class="Svg-ytk21e-0 dMCjEC sc-bkkeKt facebook-logo"
+                    class="Svg-ytk21e-0 dMCjEC sc-bkkeKt facebook-logo img"
                   >
                     <path
                       data-name="White"
@@ -58,6 +60,7 @@
                     src="./assets/icons8-apple-logo-32.png"
                     height="24"
                     width="24"
+                    class="img apple"
                     alt=""
                   />
                   Continue with Apple
@@ -69,6 +72,7 @@
                     src="./assets/icons8-google-48.png"
                     height="24"
                     width="24"
+                    class="img"
                     alt=""
                   />
                   Continue with Google
@@ -137,7 +141,9 @@
               <hr class="secondLine" />
               <div class="footer">
                 <p class="log-text">Don`t have an account?</p>
-                <button></button>
+                <button id="sign-link" class="btn">
+                  <p class="p-text" id="google">Sign up for Spotify</p>
+                </button>
               </div>
             </div>
           </div>
