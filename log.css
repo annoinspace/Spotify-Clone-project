@@ -224,7 +224,11 @@ input[type="password" i] {
   align-items: center;
   text-decoration: none;
 }
-
+.link:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
 .one {
   margin-top: 16px;
   display: flex;
@@ -414,4 +418,9 @@ input:checked + label .tick::after {
 
 #sign-link {
   margin-top: 0.5em;
+}
+
+.error,
+.valid {
+  display: none;
 }
