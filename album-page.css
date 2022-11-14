@@ -7,7 +7,12 @@
 body {
   height: 100vh width 100vw;
   color: white;
-  background-color: black;
+  background-color: #121212;
+}
+
+.icon-white {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
 }
 
 .spotify-green {
@@ -21,7 +26,7 @@ body {
 
 .page-content {
   height: 100vh;
-  background-image: linear-gradient(red, black, black);
+  background-image: linear-gradient(red, #121212, #121212);
   flex-grow: 1;
 }
 .content-wrapper {
@@ -33,18 +38,18 @@ body {
 .navigation-container {
   height: 100vh;
 }
-
 .border {
   border: 1px solid white;
 }
 
 #currently-playing {
   height: 80px;
-  width: 100%;
+  min-width: 100%;
   border-top: 1px solid rgb(61, 61, 61);
-  background-color: black;
+  background-color: #191919;
   position: fixed;
   bottom: 0px;
+  margin: 0;
 }
 
 #spotify-logo {
@@ -91,7 +96,7 @@ body {
 }
 
 .arrow {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(18, 18, 18, 0.4);
   width: 35px;
   height: 35px;
   padding: 5px;
@@ -108,11 +113,11 @@ body {
 }
 
 .arrow:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(18, 18, 18, 0.8);
 }
 
 #album-content {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(18, 18, 18, 0.4);
   flex-grow: 1;
   max-width: 100%;
 }
@@ -136,6 +141,10 @@ body {
   flex-grow: 1;
 }
 
+hr {
+  border: 1px solid white;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -149,6 +158,14 @@ body {
 }
 .track-name {
   flex-grow: 1;
+}
+
+#currently-playing-img-container {
+  background-color: aqua;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 ion-icon {
