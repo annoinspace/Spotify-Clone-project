@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh width 100vw;
+  color: white;
+  background-color: black;
+}
+
+.spotify-green {
+  background-color: #1db954;
+}
+
+.main-body-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.page-content {
+  flex-direction: column;
+  height: 100vh;
+  background-color: #884343;
+  /*   background-color: #1db954; */
+}
+
+.navigation-container {
+  height: 100vh;
+}
+
+.border {
+  border: 1px solid white;
+}
+
+#currently-playing {
+  height: 80px;
+  width: 100%;
+  border-top: 1px solid gray;
+  background-color: #181818;
+  position: fixed;
+  bottom: 0px;
+}
+
+#spotify-logo {
+  height: 85px;
+  padding: 25px 75px 25px 25px;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+/*-----------Jumbotron-------------*/
+
+.jumbotron-fluid {
+  background-image: url(https://www.rollingstone.com/wp-content/uploads/2018/06/queen-news-of-the-world-opener-c5bda6ed-0bdf-42c0-8d93-7b29ec5c4259.jpg);
+  background-size: cover;
+  height: 35vh;
+  background-position-y: -27vh;
+}
+
+.artistDescription {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  padding-top: 115px;
+}
+
+/*--------------Play botton------------*/
+
+.playBtn {
+  background-color: #1db954;
+  border-radius: 50%;
+  height: 10vh;
+  width: 10vh;
+}
+
+/*-----------------------Popular Section----------------*/
+
+.popular {
+  border: 1px solid darkgray;
+  flex-grow: 3;
+}
+
+.artistPick {
+  flex-grow: 1;
+  border: 1px solid darkgray;
+}
