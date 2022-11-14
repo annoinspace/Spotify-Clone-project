@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh width 100vw;
+  color: white;
+  background-color: black;
+}
+
+.spotify-green {
+  background-color: #1db954;
+}
+
+.main-body-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* .navigation-container {
+  flex-grow: 1;
+}
+
+.page-content {
+  flex-grow: 1;
+} */
+.border {
+  border: 1px solid white;
+}
+
+#spotify-logo {
+  height: 85px;
+  padding: 25px 75px 25px 25px;
+}
