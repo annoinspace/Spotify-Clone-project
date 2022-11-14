@@ -69,11 +69,12 @@ div {
   transition-property: background-color, border-color, color, box-shadow, filter,
     transform;
   transform: translate3d(0px, 0px, 0px);
-  padding: 10px 30px;
+  padding: 11px 30px;
   position: relative;
   border: 1px solid var(--essential-subdued, #878787);
   width: 100%;
   cursor: pointer;
+  background-color: transparent;
 }
 .btn:hover {
   border-color: var(--essential-base, #000000);
@@ -407,5 +408,5 @@ input:checked + label .tick::after {
 }
 
 #sign-link {
-  margin-top: 1.5em;
+  margin-top: 0.5em;
 }
