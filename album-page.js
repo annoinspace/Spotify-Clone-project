@@ -40,6 +40,9 @@ const displayAlbum = (album) => {
   albumNameElement.innerText = album.title
   let albumImageElement = document.getElementById("album-img")
   albumImageElement.src = album.cover_big
+  let albumArtistElement = document.getElementById("album-artist")
+  albumArtistElement.innerText = ""
+  albumArtistElement.innerText = album.artist.name
   loadTracks(album.title)
 }
 
@@ -65,7 +68,7 @@ const loadTracks = (albumName) => {
 // then display all the tracks
 
 const displayTracks = (tracks) => {
-  let albumContentElement = document.getElementById("table-title")
+  let albumContentElement = document.getElementById("track-table-content")
   tracks.forEach((track, index) => {
     let trackElement = document.createElement("div")
     trackElement.classList.add("table-row")
@@ -75,14 +78,14 @@ const displayTracks = (tracks) => {
         <div>${track.title}</div>
         <div>Queen</div>
     </div>
-    <div class="${track.duration}">2:59</div>
+    <div class="track duration">${track.duration}</div>
     `
     albumContentElement.appendChild(trackElement)
   })
 }
 
 window.onload = () => {
-  //   const urlParams = new URLSearchParams(window.location.search)
+  //   testing with the bohemian rhapsody album
   const albumId = 75621062
   loadAlbum(albumId)
 
