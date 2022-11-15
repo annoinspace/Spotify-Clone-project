@@ -21,7 +21,7 @@
 
 <body>
   <div class="container-fluid">
-    <div class="row">
+    <div class="row no-gutters">
       <!--SIDEBAR VERTICAL-->
       <div class="col-2">
         <nav
@@ -119,14 +119,26 @@
         </nav>
       </div>
       <!--END SIDEBAR VERTICAL-->
-      <!--MAIN
-      <div class="col-12 mainPage">
-        <div class="col-9 col-lg-11 d-none d-md-flex">
-          <a id="left" href="#"><img src="./assets/circle-chevron-left-fill-svgrepo-com.svg"/></a>
-          <a id="right" href="#"><img src="./assets/circle-chevron-right-fill-svgrepo-com.svg"/></a>
+      <!--MAIN-->
+      <div class="col-10 mainPage">
+        <div class="arrows-profile">
+          <div><a href="#"><img id="left" src="./assets/circle-chevron-left-fill-svgrepo-com.svg"/></a></div>
+          <div><a href="#"><img id="right" src="./assets/circle-chevron-right-fill-svgrepo-com.svg"/></a></div>
+          <div class="dropdown">
+            <button class="dropbtn"><img id="profilepic" src="./assets/profile-user-svgrepo-com.svg"/>
+              Profile Name
+            <img id="pointerdown" src="./assets/pointer-down-svgrepo-com.svg"/>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Account</a>
+              <a href="#">Profile</a>
+              <a href="#">Settings</a>
+              <a href="#">Log Out</a>
+            </div>
+          </div>
         </div>
       </div>
-  END MAIN-->
+  <!--END MAIN-->
     </div>
   </div>
   <script

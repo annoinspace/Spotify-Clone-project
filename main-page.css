@@ -14,9 +14,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   bottom: 0;
-  width: 260px;
   flex-flow: column nowrap;
   align-items: flex-start;
   background-color: black;
@@ -133,8 +131,78 @@ hr {
 /* End of scrollbar */
 
 /*MAIN PAGE SECTION*/
+
+/* Dropdown Button */
+.arrows-profile {
+  background-color: yellow;
+  margin-left: 0;
+  display: flex;
+}
+.dropdown {
+  margin-left: auto;
+}
+
 #left,
 #right {
+  margin-top: 1vh;
+  width: 30px;
+}
+
+#profilepic,
+#pointerdown {
+  width: 2.5vw;
+  height: 2.5vh;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
     contrast(103%);
+}
+
+.dropbtn {
+  background-color: black;
+  color: white;
+  font-family: "GothamBlack";
+  border: none;
+  border-radius: 30px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 1vh;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #282828;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-family: "GothamBold";
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #494949;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
 }
