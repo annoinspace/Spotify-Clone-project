@@ -1,147 +1,178 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-  <!-- Bootstrap CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-    crossorigin="anonymous"
-  />
-  <link rel="stylesheet" type="text/css" href="main-page.css" />
-  <title>Spotify</title>
-</head>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="main-page.css" />
+    <title>Spotify</title>
+  </head>
 
-<body>
-  <div class="container-fluid">
-    <div class="row no-gutters">
-      <!--SIDEBAR VERTICAL-->
-      <div class="col-2">
-        <nav
-        class="navbar navbar-expand-md fixed-left"
-        id="sidebar">
-          <div class="nav-container">
-            <a class="navbar-brand" href="main-page.html">
-            <img id="logo"
-               src="./assets/spotify-svgrepo-com.svg"
-               alt="Spotify_Logo"/> 
-            Spotify
-            </a>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <ul id="HomeSearchLibrary">
-                <li>
-                  <a class="nav-item nav-link" href="main-page.html"
-                   >
-                   <img src="./assets/home-button-svgrepo-com.svg" id="navbar-logos"/>
-                   Home
-                  </a>
-                </li>
-                <li>
-                  <a class="nav-item nav-link" href="#"
-                      >
-                       <img src="./assets/search-svgrepo-com.svg" id="navbar-logos"/>
-                       Search
-                  </a>
-                </li>
-                <li>
-                  <a class="nav-item nav-link" href="#"
-                     >
-                     <img src="./assets/library-svgrepo-com.svg" id="navbar-logos"/>
-                     Your Library
-                  </a>
-                </li>
-                <br>
-                <li>
-                    <a class="nav-item nav-link" href="#"
-                      >
-                      <img src="./assets/plus-svgrepo-com.svg" id="navbar-logos"/>
-                      Create Playlist
-                    </a>
-                </li>
-                <li>
-                    <a class="nav-item nav-link" href="#"
-                      >
-                      <img src="./assets/liked-songs.png" id="liked-songs"/>
-                    Liked Songs
-                    </a>
-                </li>
-                <hr>
-                <div class="playlists mt-2 pt-1 overflow-auto">
-                  <div class="playlist-link my-1">Just checking if this works or not</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                  <div class="playlist-link my-1">Playlist</div>
-                <li id="install-app">
-                  <a class="nav-item nav-link" href="#"
-                    >
-                    <img src="./assets/download-svgrepo-com.svg" id="navbar-logos"/>
-                    Install App
-                  </a>
-                </li>
-              </ul>
+  <body>
+    <div class="container-fluid">
+      <div class="row no-gutters">
+        <!--SIDEBAR VERTICAL-->
+        <div class="col-2">
+          <nav class="navbar navbar-expand-md" id="sidebar">
+            <div class="nav-container">
+              <a class="navbar-brand" href="main-page.html">
+                <img
+                  id="logo"
+                  src="./assets/spotify-svgrepo-com.svg"
+                  alt="Spotify_Logo"
+                />
+                Spotify
+              </a>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <ul id="HomeSearchLibrary">
+                    <li>
+                      <a class="nav-item nav-link" href="main-page.html">
+                        <img
+                          src="./assets/home-button-svgrepo-com.svg"
+                          id="navbar-logos"
+                        />
+                        Home
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-item nav-link" href="#">
+                        <img
+                          src="./assets/search-svgrepo-com.svg"
+                          id="navbar-logos"
+                        />
+                        Search
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-item nav-link" href="#">
+                        <img
+                          src="./assets/library-svgrepo-com.svg"
+                          id="navbar-logos"
+                        />
+                        Your Library
+                      </a>
+                    </li>
+                    <br />
+                    <li>
+                      <a class="nav-item nav-link" href="#">
+                        <img
+                          src="./assets/plus-svgrepo-com.svg"
+                          id="navbar-logos"
+                        />
+                        Create Playlist
+                      </a>
+                    </li>
+                    <li>
+                      <a class="nav-item nav-link" href="#">
+                        <img src="./assets/liked-songs.png" id="liked-songs" />
+                        Liked Songs
+                      </a>
+                    </li>
+                    <hr />
+                    <div class="playlists mt-2 pt-1 overflow-auto">
+                      <div class="playlist-link my-1">
+                        Just checking if this works or not
+                      </div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                      <div class="playlist-link my-1">Playlist</div>
+                    </div>
+                    <li id="install-app">
+                      <a class="nav-item nav-link" href="#">
+                        <img
+                          src="./assets/download-svgrepo-com.svg"
+                          id="navbar-logos"
+                        />
+                        Install App
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
-          </div>
-        </nav>
-      </div>
-      <!--END SIDEBAR VERTICAL-->
-      <!--MAIN-->
-      <div class="col-10 mainPage">
-        <div class="arrows-profile">
-          <div><a href="#"><img id="left" src="./assets/circle-chevron-left-fill-svgrepo-com.svg"/></a></div>
-          <div><a href="#"><img id="right" src="./assets/circle-chevron-right-fill-svgrepo-com.svg"/></a></div>
-          <div class="dropdown">
-            <button class="dropbtn"><img id="profilepic" src="./assets/profile-user-svgrepo-com.svg"/>
-              Profile Name
-            <img id="pointerdown" src="./assets/pointer-down-svgrepo-com.svg"/>
-            </button>
-            <div class="dropdown-content">
-              <a href="#">Account</a>
-              <a href="#">Profile</a>
-              <a href="#">Settings</a>
-              <a href="#">Log Out</a>
+          </nav>
+        </div>
+        <!--END SIDEBAR VERTICAL-->
+        <!--MAIN-->
+        <div class="col-10 mainPage">
+          <div class="arrows-profile">
+            <div>
+              <a href="#"
+                ><img
+                  id="left"
+                  src="./assets/circle-chevron-left-fill-svgrepo-com.svg"
+              /></a>
+            </div>
+            <div>
+              <a href="#"
+                ><img
+                  id="right"
+                  src="./assets/circle-chevron-right-fill-svgrepo-com.svg"
+              /></a>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">
+                <img
+                  id="profilepic"
+                  src="./assets/profile-user-svgrepo-com.svg"
+                />
+                Profile Name
+                <img
+                  id="pointerdown"
+                  src="./assets/pointer-down-svgrepo-com.svg"
+                />
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Account</a>
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+                <a href="#">Log Out</a>
+              </div>
             </div>
           </div>
         </div>
+        <!--END MAIN-->
       </div>
-  <!--END MAIN-->
     </div>
-  </div>
-  <script
+    <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
@@ -151,5 +182,5 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
-</body>
+  </body>
 </html>
