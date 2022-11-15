@@ -11,8 +11,15 @@ body {
 }
 
 .icon-white {
-  font-size: 2rem;
+  font-size: 1rem;
   color: rgb(255, 255, 255);
+  margin-inline: 10px;
+}
+
+.icon-white-large {
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+  margin-inline: 10px;
 }
 
 .spotify-green {
@@ -40,16 +47,6 @@ body {
 }
 .border {
   border: 1px solid white;
-}
-
-#currently-playing {
-  height: 80px;
-  min-width: 100%;
-  border-top: 1px solid rgb(61, 61, 61);
-  background-color: #191919;
-  position: fixed;
-  bottom: 0px;
-  margin: 0;
 }
 
 #spotify-logo {
@@ -173,6 +170,16 @@ hr {
   flex-grow: 1;
 }
 
+#currently-playing {
+  height: 90px;
+  min-width: 100%;
+  border-top: 1px solid rgb(61, 61, 61);
+  background-color: #191919;
+  position: fixed;
+  bottom: 0px;
+  margin: 0;
+}
+
 #currently-playing-img-container {
   background-color: aqua;
   height: 50px;
@@ -183,6 +190,25 @@ hr {
 
 #currently-playing-img {
   width: 100%;
+}
+
+.progress-wrapper {
+  width: 500px;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar-fill {
+  display: block;
+  height: 5px;
+  background-color: #797979;
+  border-radius: 2px;
+  transition: width 500ms ease-in-out;
 }
 
 ion-icon {

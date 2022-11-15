@@ -73,14 +73,20 @@
             <div id="album-content">
               <div id="play-section" class="container mt-3 border">
                 <div class="row">
-                  <div class="col"></div>
+                  <div class="col">
+                    <span> <i class="bi bi-heart"></i></span>
+
+                    <span><i class="bi bi-three-dots"></i></span>
+                   
+                    
+                  </div>
                 </div>
               </div>
               <div id="album-table" class="container">
                 <div class="row">
-                    <div class="col">
-                        <div id="track-list" class="">
-                            <div id="table-title" class="table-row ">
+                    <div class="col mb-5">
+                        <div id="track-list" class="mb-5">
+                            <div id="table-title" class="table-row">
                                 <div class="track">#</div>
                                 <div class="track title-header">TITLE</div>
                                 <div class="track "><i class="bi bi-clock"></i></div>
@@ -97,7 +103,7 @@
                             </div>
                        
                             <div class="table-row ">
-                                <div class="track number ">1</div>
+                                <div class="track number ">2</div>
                                 <div class=" track track-name ">
                                     <div>Killer Queen</div>
                                     <div>Queen</div>
@@ -105,7 +111,55 @@
                                 <div class=" track duration ">2:59</div>
                             </div>
                             <div class="table-row ">
-                                <div class="track number ">1</div>
+                                <div class="track number ">3</div>
+                                <div class=" track track-name ">
+                                    <div>Killer Queen</div>
+                                    <div>Queen</div>
+                                </div>
+                                <div class=" track duration ">2:59</div>
+                            </div>
+                            <div class="table-row ">
+                                <div class="track number ">4</div>
+                                <div class=" track track-name ">
+                                    <div>Killer Queen</div>
+                                    <div>Queen</div>
+                                </div>
+                                <div class=" track duration ">2:59</div>
+                            </div>
+                            <div class="table-row ">
+                                <div class="track number ">5</div>
+                                <div class=" track track-name ">
+                                    <div>Killer Queen</div>
+                                    <div>Queen</div>
+                                </div>
+                                <div class=" track duration ">2:59</div>
+                            </div>
+                            <div class="table-row ">
+                                <div class="track number ">6</div>
+                                <div class=" track track-name ">
+                                    <div>Killer Queen</div>
+                                    <div>Queen</div>
+                                </div>
+                                <div class=" track duration ">2:59</div>
+                            </div>
+                            <div class="table-row ">
+                                <div class="track number ">6</div>
+                                <div class=" track track-name ">
+                                    <div>Killer Queen</div>
+                                    <div>Queen</div>
+                                </div>
+                                <div class=" track duration ">2:59</div>
+                            </div>
+                            <div class="table-row ">
+                                <div class="track number ">7</div>
+                                <div class=" track track-name ">
+                                    <div>Killer Queen</div>
+                                    <div>Queen</div>
+                                </div>
+                                <div class=" track duration ">2:59</div>
+                            </div>
+                            <div class="table-row ">
+                                <div class="track number ">8</div>
                                 <div class=" track track-name ">
                                     <div>Killer Queen</div>
                                     <div>Queen</div>
@@ -121,35 +175,43 @@
       </div>
       <!-- current song bar container -->
     </div>
-    <div id="currently-playing" class="container mb-3" >
+    <div id="currently-playing" class="container" >
       
         <div class="row p-2">
-          <div class="col-4 border d-flex justify-content-start align-items-center">
-            <div class="d-flex">
-              <div id="currently-playing-img-container">
+          <div class="col-3 d-flex justify-content-start align-items-center">
+                      <div id="currently-playing-img-container" class="mr-2">
                 <img id="currently-playing-img" src="./assets/bohemina rhapsody img.jpg">
               </div>
-              <div>Song Info</div>
-              <div>Artist</div>
-            </div>
-          <div>
-            <span>ICON</span>
-            <span>ICON</span>
+              <div id="current-song-text-wrapper" class="">
+                <div>Song Info</div>
+                <div>Artist</div>
+              </div>
+            
+          <div class="mr-2 ml-2">
+            <span><i class="bi bi-heart icon-white"></i></span>
+            <span><i class="bi bi-window-fullscreen icon-white"></i></span>
           </div>
           </div>
-          <div class="col-4 border d-flex flex-column justify-content-center align-items-center">
-      <div>
+          <div class="col-6  d-flex flex-column justify-content-center align-items-center">
+      <div class="d-flex justify-content-start align-items-center">
         <span> <i class="bi bi-shuffle icon-white" ></i></span>
         <span> <i class="bi bi-skip-start-fill icon-white" ></i></span>
-        <span> <i class="bi bi-play-circle-fill icon-white" ></i></span>
+        <span> <i class="bi bi-play-circle-fill icon-white-large " ></i></span>
         <span> <i class="bi bi-skip-end-fill icon-white" ></i></span>
         <span> <i class="bi bi-arrow-repeat icon-white" ></i></span>
-      
-        
       </div>
-      <div>Progress bar</div>
-          </div>
-          <div class="col-4 border d-flex justify-content-end align-items-center">
+            <!-- PROGRESS BAR -->
+      <div class="d-flex justify-content-center align-items-center">
+        <div>0:12</div>
+      <div class="progress-wrapper m-2">
+        <div class="progress-bar">
+          <span class="progress-bar-fill" style="width: 70%;"></span>
+        </div>
+      </div>
+      <div>2:45</div>
+    </div>
+      </div>
+          <div class="col-3  d-flex justify-content-end align-items-center">
             EXTRA ICONS
           </div>
        
