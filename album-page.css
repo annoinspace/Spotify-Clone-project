@@ -117,6 +117,10 @@ body {
   font-family: GothamBold;
 }
 
+#album-duration {
+  margin-left: 5px;
+}
+
 #artist-small-image-container {
   height: 30px;
   width: 30px;

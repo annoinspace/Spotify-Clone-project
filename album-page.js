@@ -56,13 +56,17 @@ const displayAlbum = (album) => {
   albumYear.innerText = year
   // number of songs
   let numberOfTracks = document.getElementById("number-of-tracks")
-  numberOfTracks.innerText = `${album.nb_tracks} songs, `
+  numberOfTracks.innerText = `${album.nb_tracks} songs,`
   //  total album duration
   let albumDuration = document.getElementById("album-duration")
-  let totalSeconds = album.duration
+  const totalSeconds = album.duration
   // checking if it it a number
   console.log(typeof totalSeconds)
-
+  let hours = Math.floor(totalSeconds / 3600)
+  console.log(hours)
+  let minutes = Math.floor((totalSeconds - hours * 3600) / 60)
+  console.log(minutes)
+  albumDuration.innerText = " " + ` ${hours} hr ${minutes} min`
   loadTracks(album.title)
 }
 
