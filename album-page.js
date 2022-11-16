@@ -124,8 +124,11 @@ const displayTracks = (tracks) => {
 
 let audioElement = document.getElementById("audio")
 audioElement.src = ""
+let audioDurationSeconds = ""
 
 function changeTrack(event) {
+  clearInterval(interval)
+
   let track = event.target
   let currentTrack = track.innerText
   console.log(currentTrack)
@@ -162,6 +165,8 @@ function changeTrack(event) {
         img.src = response.data[0].album.cover
         audioElement.src = response.data[0].preview
         console.log(audioElement.src)
+        audioDurationSeconds = response.data[0].duration
+        console.log(audioDurationSeconds)
       })
 
       .catch((err) => {
@@ -187,6 +192,7 @@ window.onload = () => {
 const musicContainer = document.getElementById("currently-playing")
 const playpause = document.querySelector(".playpause")
 const progressContainer = document.getElementById("trackProgress")
+const timeElapsed = document.getElementById("time-elapsed")
 
 playpause.addEventListener("click", () => {
   playpause.classList.toggle("playing")
@@ -198,16 +204,40 @@ playpause.addEventListener("click", () => {
     playSong()
   }
 })
-
+let interval
+let width = 0
 function playSong() {
   musicContainer.classList.add("play")
 
+  function play() {
+    let elem = document.getElementById("trackProgressElapsed")
+
+    clearInterval(interval)
+    interval = setInterval(frame, audioDurationSeconds)
+
+    function frame() {
+      if (width >= 100) {
+        width = 1
+        clearInterval(interval)
+      } else {
+        let increment = 100 / audioDurationSeconds
+        width += increment
+
+        elem.style.width = width + "%"
+      }
+    }
+  }
   audio.play()
+  play()
 }
 function pauseSong() {
   musicContainer.classList.remove("play")
 
   audio.pause()
+  function pause() {
+    clearInterval(interval)
+  }
+  pause()
 }
 
 // playpause.addEventListener("click", () => {
