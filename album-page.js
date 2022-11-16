@@ -46,6 +46,7 @@ const displayAlbum = (album) => {
   // artist name
   let albumArtistElement = document.getElementById("album-artist")
   albumArtistElement.innerText = album.artist.name
+  artistName = album.artist.name
   // small icon with artist image
   let artistIcon = document.getElementById("artist-small-image")
   artistIcon.src = album.artist.picture_small
@@ -94,6 +95,20 @@ const loadTracks = (albumName) => {
 const displayTracks = (tracks) => {
   let albumContentElement = document.getElementById("track-table-content")
   tracks.forEach((track, index) => {
+    // make the time in the correct format
+    const trackDuration = track.duration
+
+    let trackMinutes = Math.floor(trackDuration / 60)
+    console.log(trackMinutes)
+    let remainingSeconds = trackDuration % 60
+
+    if (remainingSeconds < 10) {
+      return String(remainingSeconds).padStart("0")
+    }
+
+    console.log(remainingSeconds)
+
+    // create the new track
     let trackElement = document.createElement("div")
     trackElement.classList.add("table-row")
     trackElement.innerHTML = `
@@ -102,7 +117,7 @@ const displayTracks = (tracks) => {
         <div>${track.title}</div>
         <div>${artistName}</div>
     </div>
-    <div class="track duration">${track.duration}</div>
+    <div class="track duration">${trackMinutes}:${remainingSeconds}</div>
     `
     albumContentElement.appendChild(trackElement)
   })

@@ -10,6 +10,10 @@
   font-family: "GothamBook";
   src: url(fonts/GothamBook.ttf);
 }
+@font-face {
+  font-family: "GothamLight";
+  src: url(fonts/Gotham-Light.otf);
+}
 
 *,
 *::before,
@@ -207,6 +211,9 @@ hr {
 
 .track-name > :first-child {
   font-family: GothamBold;
+}
+.track-name > :nth-child(2) {
+  font-family: GothamLight;
 }
 
 #currently-playing {
