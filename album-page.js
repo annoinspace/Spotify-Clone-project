@@ -123,6 +123,7 @@ const displayTracks = (tracks) => {
 }
 
 let audioElement = document.getElementById("audio")
+audioElement.src = ""
 
 function changeTrack(event) {
   let track = event.target
@@ -143,10 +144,10 @@ function changeTrack(event) {
   let timeText = track.parentNode.nextElementSibling.innerHTML
   console.log(timeText)
   totalTrackDurationElement.innerText = timeText
-  // change the image
+  // change the image and load the new track
   let img = document.getElementById("currently-playing-img")
 
-  const getImage = () => {
+  const getImageandTrack = () => {
     fetch(
       `https://striveschool-api.herokuapp.com/api/deezer/search?q=${chosenArtist}/${currentTrack}`,
       {
@@ -159,6 +160,8 @@ function changeTrack(event) {
         console.log(response.data[0])
         console.log(response.data[0].album.cover_xl)
         img.src = response.data[0].album.cover
+        audioElement.src = response.data[0].preview
+        console.log(audioElement.src)
       })
 
       .catch((err) => {
@@ -166,7 +169,7 @@ function changeTrack(event) {
       })
   }
 
-  getImage()
+  getImageandTrack()
 }
 
 window.onload = () => {
