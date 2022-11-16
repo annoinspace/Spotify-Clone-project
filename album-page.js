@@ -112,17 +112,57 @@ const displayTracks = (tracks) => {
     trackElement.innerHTML = `
     <div class="track number">${index + 1}</div>
     <div class="track track-name">
-        <div class="cursor">${track.title}</div>
+        <div class="cursor" onclick="changeTrack(event)">${track.title}</div>
         <div>${artistName}</div>
     </div>
-    <div class="track duration">${trackMinutes}:${remainingSeconds}</div>
+    <div class="track-duration" class="track">${trackMinutes}:${remainingSeconds}</div>
     `
     albumContentElement.appendChild(trackElement)
   })
 }
 
-const playTrack = (event) => {
-  event.target.classList.add("border")
+function changeTrack(event) {
+  let track = event.target
+  let currentTrack = track.innerText
+  console.log(currentTrack)
+  // get the lower song bar container
+  let currentTrackElement = document.getElementById("current-track")
+  currentTrackElement.innerHTML = currentTrack
+  // change the artist based on the event target
+  let artist = track.nextElementSibling
+  console.log(artist.innerText)
+  let chosenArtist = artist.innerText
+  let artistElement = currentTrackElement.nextElementSibling
+  artistElement.innerText = chosenArtist
+
+  // change the track duration
+  let totalTrackDurationElement = document.getElementById("total-time")
+  let timeText = track.parentNode.nextElementSibling.innerHTML
+  console.log(timeText)
+  totalTrackDurationElement.innerText = timeText
+  // change the image
+  let img = document.getElementById("currently-playing-img")
+
+  const getImage = () => {
+    fetch(
+      `https://striveschool-api.herokuapp.com/api/deezer/search?q=${chosenArtist}/${currentTrack}`,
+      {
+        method: "GET"
+      }
+    )
+      .then((response) => response.json())
+      .then((response) => {
+        console.log(response)
+        console.log(response.data)
+        console.log(response.data.md5_image)
+      })
+
+      .catch((err) => {
+        console.error(err)
+      })
+  }
+
+  getImage()
 }
 
 window.onload = () => {
