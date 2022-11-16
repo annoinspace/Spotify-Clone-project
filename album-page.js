@@ -158,7 +158,7 @@ function changeTrack(event) {
         console.log(response)
         console.log(response.data[0])
         console.log(response.data[0].album.cover_xl)
-        img.src = response.data[0].album.cover_xl
+        img.src = response.data[0].album.cover
       })
 
       .catch((err) => {

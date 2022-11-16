@@ -221,6 +221,7 @@ hr {
 
 .track-name > :first-child {
   font-family: GothamBold;
+  font-size: 1em;
 }
 .track-name > :nth-child(2) {
   font-family: GothamLight;
@@ -237,7 +238,7 @@ hr {
 }
 
 #currently-playing-img-container {
-  background-color: aqua;
+  margin: 0;
   height: 50px;
   width: 50px;
   object-fit: cover;
@@ -245,7 +246,11 @@ hr {
 }
 
 #currently-playing-img {
-  width: 100%;
+  margin: 0;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #playButtonBottom {
@@ -257,6 +262,11 @@ hr {
 
 #current-track {
   font-family: GothamBold;
+  font-size: 0.8em;
+}
+
+#current-track + div {
+  font-size: 0.8em;
 }
 
 .playpause {
