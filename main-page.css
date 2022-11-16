@@ -1,0 +1,250 @@
+@font-face {
+  font-family: "GothamBlack";
+  src: url(fonts/Gotham-Black.otf);
+}
+@font-face {
+  font-family: "GothamBold";
+  src: url(fonts/Gotham-Bold.otf);
+}
+body {
+  background-color: #121212;
+}
+/*SIDEBAR SECTION*/
+.navbar {
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  background-color: black;
+  height: 100vh;
+}
+
+#navbarNavAltMarkup {
+  padding-top: 4vh;
+}
+
+#logo {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+}
+
+.navbar-brand {
+  font-family: "GothamBlack";
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
+#HomeSearchLibrary > li > a {
+  font-family: "GothamBold";
+}
+
+#navbar-logos {
+  filter: invert(53%) sepia(7%) saturate(486%) hue-rotate(193deg)
+    brightness(95%) contrast(85%);
+  width: 20px;
+  height: 20px;
+  transition: 0.3s;
+}
+
+#navbar-logos:hover {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+}
+
+.navbar .navbar-collapse .navbar-nav a {
+  color: #80828d !important;
+  transition: 0.3s;
+}
+
+.navbar .navbar-collapse .navbar-nav a:hover {
+  color: white !important;
+}
+
+#liked-songs {
+  width: 20px;
+  filter: brightness(60%);
+  transition: 0.3s;
+}
+
+#liked-songs:hover {
+  filter: brightness(100%);
+}
+
+.navbar.fixed-left .navbar-brand {
+  padding-top: 2vh;
+  padding-bottom: 3vh;
+  padding-left: 2vw;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 1vw;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #80828d;
+  width: 180px;
+  margin-left: 1vw;
+}
+
+.playlists {
+  margin-left: 1vw;
+  width: 13vw;
+  cursor: pointer;
+  overflow-y: scroll;
+  height: 58vh;
+}
+
+.playlist-link {
+  color: #80828d;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: 0.3s;
+}
+.playlist-link:hover {
+  color: white;
+}
+
+.navbar.fixed-left .navbar-collapse .navbar-nav #install-app {
+  position: absolute;
+  bottom: 2vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4d4d4d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #808080;
+}
+/* End of scrollbar */
+
+/*MAIN PAGE SECTION*/
+
+/* top navbar */
+.arrows-profile {
+  background-color: transparent;
+  margin-left: 0;
+  display: flex;
+}
+.dropdown {
+  margin-left: auto;
+}
+
+#left,
+#right {
+  margin-top: 2vh;
+  width: 30px;
+  margin-left: 2vw;
+}
+
+#profilepic,
+#pointerdown {
+  width: 20px;
+  height: 20px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+}
+
+.dropbtn {
+  background-color: black;
+  color: white;
+  font-family: "GothamBlack";
+  border: none;
+  border-radius: 30px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 2vh;
+  margin-right: 2vw;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #282828;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-family: "GothamBold";
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #494949;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* end of top navbar */
+
+/* main section */
+
+h1 {
+  font-family: "GothamBold";
+}
+
+.album-container {
+  padding: 10px;
+}
+
+/* Animations */
+
+.album-container {
+  transition: 0.3s ease-out;
+}
+
+.album-container:hover {
+  transform: translateY(1vh);
+  color: white;
+  cursor: pointer;
+}
+
+.album-container:hover::before {
+  opacity: 1;
+  border-radius: 15px;
+}
+
+.album-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #1db954, transparent);
+  z-index: 2;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.album-container h6 {
+  position: relative;
+  z-index: 3;
+}
+
+/* end of main section */
