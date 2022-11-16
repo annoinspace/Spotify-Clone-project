@@ -1,25 +1,48 @@
+@font-face {
+  font-family: "GothamBlack";
+  src: url(fonts/Gotham-Black.otf);
+}
+@font-face {
+  font-family: "GothamBold";
+  src: url(fonts/Gotham-Bold.otf);
+}
+@font-face {
+  font-family: "GothamBook";
+  src: url(fonts/GothamBook.ttf);
+}
+@font-face {
+  font-family: "GothamLight";
+  src: url(fonts/Gotham-Light.otf);
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   height: 100vh width 100vw;
   color: white;
   background-color: #121212;
+  font-family: GothamBook;
+  user-select: none;
 }
 
 .icon-white {
   font-size: 1rem;
   color: rgb(255, 255, 255);
-  margin-inline: 10px;
+  margin-inline: 20px;
 }
 
 .icon-white-large {
   font-size: 2em;
   color: rgb(255, 255, 255);
-  margin-inline: 10px;
+  margin-inline: 20px;
 }
 
 .spotify-green {
@@ -47,6 +70,10 @@ body {
 }
 .border {
   border: 1px solid white;
+}
+
+.cursor {
+  cursor: pointer;
 }
 
 #spotify-logo {
@@ -97,6 +124,27 @@ body {
 #album-img {
   height: 250px;
   object-fit: cover;
+}
+
+#album-name {
+  font-family: GothamBold;
+}
+
+#album-duration {
+  margin-left: 5px;
+}
+
+#artist-small-image-container {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 5px;
+}
+
+#artist-small-image {
+  object-fit: cover;
+  height: 40px;
 }
 
 #jumbotron-text {
@@ -170,6 +218,13 @@ hr {
   flex-grow: 1;
 }
 
+.track-name > :first-child {
+  font-family: GothamBold;
+}
+.track-name > :nth-child(2) {
+  font-family: GothamLight;
+}
+
 #currently-playing {
   height: 90px;
   min-width: 100%;
@@ -190,6 +245,53 @@ hr {
 
 #currently-playing-img {
   width: 100%;
+}
+
+#playButtonBottom {
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.playpause {
+  padding: 12px;
+  border: 1px solid green;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.playpause .button {
+  width: 15px;
+  height: 15px;
+  background: #191919;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: inherit;
+  clip-path: polygon(
+    0 0,
+    50% 25%,
+    50% 75%,
+    50% 75%,
+    50% 25%,
+    100% 50%,
+    100% 50%,
+    0 100%
+  );
+}
+.playpause.playing .button {
+  clip-path: polygon(
+    0 0,
+    40% 0,
+    40% 100%,
+    60% 100%,
+    60% 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
 }
 
 .progress-wrapper {

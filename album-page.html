@@ -58,11 +58,18 @@
                     </div>
                     <div id="jumbotron-text" class="">
                       <h5 >ALBUM</h5>
-                      <h1 id="album-name">Bohemian Rhapsody(The Original Soundtrack)</h1>
-                      <div>
-                       <span>image</span>
-                       <span id="album-artist">Artist</span>
-                        <span>2016</span> <span>22 songs, 1hr 19min</span>
+                      <h1 id="album-name"></h1>
+                      <!-- elements under the album title -->
+                      <div class=" d-flex align-items-center">
+                       <div id="artist-small-image-container">
+                        <img id="artist-small-image" src="" >
+                       </div>
+                       <span id="album-artist"></span>
+                       <i class="bi bi-dot text-white"></i>
+                        <span id="album-year"></span>
+                        <i class="bi bi-dot text-white"></i>
+                        <span id="number-of-tracks"></span>
+                        <span id="album-duration"></span>
                       </div>
 
                     </div>
@@ -95,16 +102,7 @@
                             <hr>
                             <!-- table rows -->
                             <div id="track-table-content">
-<!--                            
-                       
-                            <div class="table-row ">
-                                <div class="track number ">2</div>
-                                <div class=" track track-name ">
-                                    <div>Killer Queen</div>
-                                    <div>Queen</div>
-                                </div>
-                                <div class=" track duration ">2:59</div>
-                            </div> -->
+
                        
                           </div>
                         </div>
@@ -114,14 +112,16 @@
           </div>
         </div>
       </div>
+      <!-- CANVAS AREA FOR BACKGROUND COLOUR -->
+      
       <!-- current song bar container -->
     </div>
-    <div id="currently-playing" class="container" >
+    <div id="currently-playing" class="container" onclick="changeCurrentSong()" >
       
         <div class="row p-2">
           <div class="col-3 d-flex justify-content-start align-items-center">
-                      <div id="currently-playing-img-container" class="mr-2">
-                <img id="currently-playing-img" src="./assets/bohemina rhapsody img.jpg">
+                <div id="currently-playing-img-container" class="mr-2">
+                <img id="currently-playing-img" src="">
               </div>
               <div id="current-song-text-wrapper" class="">
                 <div>Song Info</div>
@@ -135,11 +135,11 @@
           </div>
           <div class="col-6  d-flex flex-column justify-content-center align-items-center">
       <div class="d-flex justify-content-start align-items-center">
-        <span> <i class="bi bi-shuffle icon-white" ></i></span>
-        <span> <i class="bi bi-skip-start-fill icon-white" ></i></span>
-        <span> <i class="bi bi-play-circle-fill icon-white-large " ></i></span>
-        <span> <i class="bi bi-skip-end-fill icon-white" ></i></span>
-        <span> <i class="bi bi-arrow-repeat icon-white" ></i></span>
+        <span> <i class="bi bi-shuffle icon-white cursor" ></i></span>
+        <span> <i class="bi bi-skip-start-fill icon-white cursor" ></i></span>
+        <span id="playButtonBottom" class="playpause"><div class="button"></div></span>
+       <span> <i class="bi bi-skip-end-fill icon-white cursor" ></i></span>
+        <span> <i class="bi bi-arrow-repeat icon-white cursor" ></i></span>
       </div>
             <!-- PROGRESS BAR -->
       <div class="d-flex justify-content-center align-items-center">
@@ -177,6 +177,7 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
+   
     <script src="./album-page.js"></script>
   </body>
 </html>
