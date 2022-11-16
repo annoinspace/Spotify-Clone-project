@@ -121,7 +121,9 @@ const displayTracks = (tracks) => {
   })
 }
 
-// playButton.classList.toggle("hidden")
+const playTrack = (event) => {
+  event.target.classList.add("border")
+}
 
 window.onload = () => {
   //   testing with the bohemian rhapsody album
@@ -141,6 +143,7 @@ const playpause = document.querySelector(".playpause")
 playpause.addEventListener("click", () => {
   playpause.classList.toggle("playing")
 })
+
 // to get the background colour to change with each image
 
 // const backgroundColor = () => {

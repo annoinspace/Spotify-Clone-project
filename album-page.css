@@ -36,13 +36,13 @@ body {
 .icon-white {
   font-size: 1rem;
   color: rgb(255, 255, 255);
-  margin-inline: 10px;
+  margin-inline: 20px;
 }
 
 .icon-white-large {
   font-size: 2em;
   color: rgb(255, 255, 255);
-  margin-inline: 10px;
+  margin-inline: 20px;
 }
 
 .spotify-green {
@@ -248,14 +248,14 @@ hr {
 }
 
 #playButtonBottom {
-  background-color: pink;
-  height: 50px;
-  width: 50px;
+  background-color: white;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
 }
 
 .playpause {
-  padding: 15px;
+  padding: 12px;
   border: 1px solid green;
   border-radius: 50%;
   background: transparent;
@@ -263,9 +263,9 @@ hr {
   transition: 0.3s ease-in-out;
 }
 .playpause .button {
-  width: 20px;
-  height: 20px;
-  background: #f0f0f0;
+  width: 15px;
+  height: 15px;
+  background: #191919;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
