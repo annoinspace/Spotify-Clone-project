@@ -184,45 +184,68 @@ window.onload = () => {
 }
 
 // play button toggle
-
+const musicContainer = document.getElementById("currently-playing")
 const playpause = document.querySelector(".playpause")
+const progressContainer = document.getElementById("trackProgress")
 
 playpause.addEventListener("click", () => {
   playpause.classList.toggle("playing")
-
-  let isPlaying = playpause.classList.contains("playing")
+  const isPlaying = musicContainer.classList.contains("play")
 
   if (isPlaying) {
-    pause()
+    pauseSong()
   } else {
-    play()
-  }
-
-  // playpause.classList.contains("playing") ? play() : pause()
-
-  let interval
-  let width = 1
-  function play() {
-    let elem = document.getElementById("trackProgressElapsed")
-
-    clearInterval(interval)
-    interval = setInterval(frame, 100)
-
-    function frame() {
-      if (width >= 100) {
-        width = 1
-        clearInterval(interval)
-      } else {
-        width++
-        elem.style.width = width + "%"
-      }
-    }
-  }
-
-  function pause() {
-    clearInterval(interval)
+    playSong()
   }
 })
+
+function playSong() {
+  musicContainer.classList.add("play")
+
+  audio.play()
+}
+function pauseSong() {
+  musicContainer.classList.remove("play")
+
+  audio.pause()
+}
+
+// playpause.addEventListener("click", () => {
+//   playpause.classList.toggle("playing")
+
+//   let isPlaying = playpause.classList.contains("playing")
+
+//   if (isPlaying) {
+//     pause()
+//   } else {
+//     play()
+//   }
+
+//   // playpause.classList.contains("playing") ? play() : pause()
+
+//   let interval
+//   let width = 1
+//   function play() {
+//     let elem = document.getElementById("trackProgressElapsed")
+
+//     clearInterval(interval)
+//     interval = setInterval(frame, 100)
+
+//     function frame() {
+//       if (width >= 100) {
+//         width = 1
+//         clearInterval(interval)
+//       } else {
+//         width++
+//         elem.style.width = width + "%"
+//       }
+//     }
+//   }
+
+//   function pause() {
+//     clearInterval(interval)
+//   }
+// })
 
 // let play = false
 
