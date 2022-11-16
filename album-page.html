@@ -137,7 +137,7 @@
       <div class="d-flex justify-content-start align-items-center">
         <span> <i class="bi bi-shuffle icon-white cursor" ></i></span>
         <span> <i class="bi bi-skip-start-fill icon-white cursor" ></i></span>
-        <span id="playButtonBottom" class="playpause"><div class="button"></div></span>
+        <span id="playButtonBottom" class="playpause" ><div class="button"></div></span>
        <span> <i class="bi bi-skip-end-fill icon-white cursor" ></i></span>
         <span> <i class="bi bi-arrow-repeat icon-white cursor" ></i></span>
       </div>
@@ -145,11 +145,13 @@
       <div class="d-flex justify-content-center align-items-center">
         <div id="time-elapsed">0:00</div>
       <div class="progress-wrapper m-2">
-        <div class="progress-bar">
-          <span class="progress-bar-fill" style="width: 70%;"></span>
+   
+        <div id="trackProgress">
+          <div id="trackProgressElapsed"></div>
         </div>
       </div>
-      <div id="total-time">2:45</div>
+      <audio src="" id="audio"></audio>
+      <div id="total-time"></div>
     </div>
       </div>
           <div class="col-3  d-flex justify-content-end align-items-center">

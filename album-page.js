@@ -94,6 +94,7 @@ const loadTracks = (albumName) => {
 // then display all the tracks
 
 const displayTracks = (tracks) => {
+  console.log(tracks)
   let albumContentElement = document.getElementById("track-table-content")
   tracks.forEach((track, index) => {
     // make the time in the correct format
@@ -120,6 +121,8 @@ const displayTracks = (tracks) => {
     albumContentElement.appendChild(trackElement)
   })
 }
+
+let audioElement = document.getElementById("audio")
 
 function changeTrack(event) {
   let track = event.target
@@ -153,8 +156,9 @@ function changeTrack(event) {
       .then((response) => response.json())
       .then((response) => {
         console.log(response)
-        console.log(response.data)
-        console.log(response.data.md5_image)
+        console.log(response.data[0])
+        console.log(response.data[0].album.cover_xl)
+        img.src = response.data[0].album.cover_xl
       })
 
       .catch((err) => {
@@ -182,7 +186,42 @@ const playpause = document.querySelector(".playpause")
 
 playpause.addEventListener("click", () => {
   playpause.classList.toggle("playing")
+
+  let isPlaying = playpause.classList.contains("playing")
+
+  if (isPlaying) {
+    pause()
+  } else {
+    play()
+  }
+
+  // playpause.classList.contains("playing") ? play() : pause()
+
+  let interval
+  let width = 1
+  function play() {
+    let elem = document.getElementById("trackProgressElapsed")
+
+    clearInterval(interval)
+    interval = setInterval(frame, 100)
+
+    function frame() {
+      if (width >= 100) {
+        width = 1
+        clearInterval(interval)
+      } else {
+        width++
+        elem.style.width = width + "%"
+      }
+    }
+  }
+
+  function pause() {
+    clearInterval(interval)
+  }
 })
+
+// let play = false
 
 // to get the background colour to change with each image
 
