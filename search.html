@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="https://kit.fontawesome.com/1205482781.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      href="https://accounts.scdn.co/sso/images/favicon.ace4d8543bbb017893402a1e9d1ac1fa.ico"
+    />
+    <link rel="stylesheet" type="text/css" href="./search.css" />
+
+    <title>Spotify</title>
+  </head>
+
+  <body>
+    <!--SIDEBAR VERTICAL-->
+
+    <div class="col-2">
+      <nav
+        class="navbar navbar-expand-md navbar-white bg-navbar fixed-left justify-content-between"
+        id="sidebar"
+      >
+        <div class="nav-container">
+          <a class="navbar-brand" href="main-page.html">
+            <img
+              id="logo"
+              src="./assets/spotify-svgrepo-com.svg"
+              alt="Spotify_Logo"
+            />
+            Spotify
+          </a>
+
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <ul id="HomeSearchLibrary">
+                <li>
+                  <a class="nav-item nav-link" href="main-page.html">
+                    <img
+                      src="./assets/home-button-svgrepo-com.svg"
+                      id="navbar-logos"
+                      title="/"
+                    />
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-item nav-link" href="#">
+                    <img
+                      src="./assets/search-svgrepo-com.svg"
+                      id="navbar-logos"
+                      title="/"
+                    />
+                    Search
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-item nav-link" href="#">
+                    <img
+                      src="./assets/library-svgrepo-com.svg"
+                      id="navbar-logos"
+                      title="/"
+                    />
+                    Your Library
+                  </a>
+                </li>
+                <br />
+                <li>
+                  <a class="nav-item nav-link" href="#">
+                    <img
+                      src="./assets/plus-svgrepo-com.svg"
+                      id="navbar-logos"
+                      title="/"
+                    />
+                    Create Playlist
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-item nav-link" href="#">
+                    <img
+                      src="./assets/liked-songs.png"
+                      id="liked-songs"
+                      title="#"
+                    />
+                    Liked Songs
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!--END SIDEBAR VERTICAL-->
+    <header>
+      <div id="margin">
+        <svg
+          role="img"
+          height="24"
+          width="24"
+          class="Svg-ytk21e-0 dUrrjJ IYDlXmBmmUKHveMzIPCF"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15.957 2.793a1 1 0 010 1.414L8.164 12l7.793 7.793a1 1 0 11-1.414 1.414L5.336 12l9.207-9.207a1 1 0 011.414 0z"
+          ></path>
+        </svg>
+        <svg
+          role="img"
+          height="24"
+          width="24"
+          class="Svg-ytk21e-0 dUrrjJ IYDlXmBmmUKHveMzIPCF"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M8.043 2.793a1 1 0 000 1.414L15.836 12l-7.793 7.793a1 1 0 101.414 1.414L18.664 12 9.457 2.793a1 1 0 00-1.414 0z"
+          ></path>
+        </svg>
+        <input
+          type="text"
+          class="input1"
+          placeholder="what do you want to listen to?"
+          id="searchInput"
+          onclick="filterFunction()"
+        />
+      </div>
+
+      <div id="signBar">
+        <span class="spantext">Premium</span>
+        <span class="spantext">Support</span>
+        <span class="spantext">Download</span>
+        <div class="break"></div>
+        <div class="signIN">
+          <span class="spantext">Sign Up</span>
+          <button class="btnLog"><span class="btntext">Log In</span></button>
+        </div>
+      </div>
+    </header>
+
+    <div class="main" id="main">
+      <div class="top">
+        <div class="col-3" id="leftSearch">
+          <img src="" alt="" />
+          <h5>Name of Album</h5>
+          <p>Name of Artist</p>
+        </div>
+        <div class="col-9">
+          <ul id="rightSearch">
+            <li>
+              <img src="" alt="" /><span>Name of Artist</span
+              ><span>Name of track</span> <span>duration</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <h4>Albums</h4>
+      <div class="row" id="searchAlbums"></div>
+      <h4>Artists</h4>
+      <div class="row" id="searchArtists"></div>
+    </div>
+
+    <script src="./search.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

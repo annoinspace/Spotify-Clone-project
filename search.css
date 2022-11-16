@@ -1,0 +1,248 @@
+@font-face {
+  font-family: "GothamBlack";
+  src: url(fonts/Gotham-Black.otf);
+}
+@font-face {
+  font-family: "GothamBold";
+  src: url(fonts/Gotham-Bold.otf);
+}
+
+body {
+  width: 91vw;
+  height: 100vh;
+  background-color: #000;
+}
+
+/*SIDEBAR SECTION*/
+.navbar.fixed-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 260px;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  background-color: black;
+  width: 20vw;
+}
+
+#logo {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+}
+
+.navbar-brand {
+  font-family: "GothamBlack";
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
+#HomeSearchLibrary > li > a {
+  font-family: "GothamBold";
+}
+
+#navbar-logos {
+  filter: invert(53%) sepia(7%) saturate(486%) hue-rotate(193deg)
+    brightness(95%) contrast(85%);
+  width: 2vw;
+  height: 2vh;
+  transition: 0.3s;
+}
+
+#navbar-logos:hover {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+}
+
+.navbar.fixed-left .navbar-collapse .navbar-nav a {
+  color: #80828d !important;
+  transition: 0.3s;
+}
+
+.navbar.fixed-left .navbar-collapse .navbar-nav a:hover {
+  color: white !important;
+}
+
+#liked-songs {
+  width: 17px;
+  filter: brightness(60%);
+  transition: 0.3s;
+  margin-left: 0.4em;
+}
+
+#liked-songs:hover {
+  filter: brightness(100%);
+}
+
+.navbar.fixed-left .navbar-brand {
+  padding-top: 2vh;
+  padding-bottom: 3vh;
+  padding-left: 2vw;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 1vw;
+}
+
+header {
+  display: flex;
+  background: antiquewhite;
+  max-width: 80%;
+  margin-left: auto;
+  height: 10%;
+  background-color: black;
+  justify-content: space-between;
+}
+
+#margin {
+  margin-left: 2em;
+}
+
+svg {
+  height: 22px;
+  opacity: 1;
+  width: 22px;
+  margin-left: 1em;
+  fill: currentcolor;
+  color: white;
+}
+
+.input1 {
+  border: 0;
+  border-radius: 50px;
+  color: #000;
+  height: 35px;
+  padding: 6px 10px;
+  text-overflow: ellipsis;
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+#signBar {
+  display: flex;
+}
+
+.spantext {
+  vertical-align: middle;
+  transform: translate3d(0px, 0px, 0px);
+  color: var(--text-subdued, #6a6a6a);
+  min-inline-size: 0px;
+  min-block-size: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 1em;
+}
+
+.break {
+  background: #fff;
+  height: 40px;
+  margin: 16px;
+  width: 1px;
+}
+
+.btnLog {
+  font-weight: 700;
+  font-family: var(--font-family, var(--fallback-fonts, sans-serif));
+  border: 0px;
+  border-radius: 500px;
+  transition-duration: 33ms;
+  padding: 0px;
+  align-self: center;
+}
+
+.btntext {
+  background-color: var(--background-base, #ffffff);
+  display: flex;
+  border-radius: 500px;
+  min-block-size: 48px;
+  padding-block: 8px;
+  padding-inline: 32px;
+  align-items: center;
+}
+.btntext:hover {
+  background-color: green;
+  font-size: large;
+}
+
+.signIN {
+  align-self: center;
+  margin-right: 5em;
+}
+
+.main {
+  width: 80%;
+  background: black;
+  margin-left: auto;
+  height: 90%;
+}
+
+.top {
+  margin-top: 3em;
+  display: flex;
+}
+
+.spantext:hover {
+  color: white;
+  cursor: pointer;
+}
+
+#rightSearch {
+  margin-left: 6em;
+  margin-top: -1em;
+}
+
+#searchAlbums div div p {
+  margin: 0;
+}
+
+.searchCard {
+  background-color: darkslategrey;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15em;
+  width: 10em;
+  border-radius: 20px;
+}
+
+.searchCard h5 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.searchCard:hover {
+  background-color: #242424;
+  transition: 0.5s;
+  text-decoration: none !important;
+  color: aliceblue;
+}
+
+a {
+  text-decoration: none !important;
+  color: aliceblue;
+  margin-block: 1em;
+}
+
+a:hover {
+  color: darkslategray;
+}
+#searchArtists .searchCard img {
+  border-radius: 50%;
+}
+
+h4 {
+  color: #fff;
+  margin-left: 1.5em;
+}
+
+#leftSearch {
+  margin-left: 1em;
+}
