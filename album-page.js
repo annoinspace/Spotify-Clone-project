@@ -33,16 +33,36 @@ const loadAlbum = (albumId) => {
 
 // display the album name and image
 
+let artistName = ""
+
 const displayAlbum = (album) => {
   console.log(album)
+  // album name
   let albumNameElement = document.getElementById("album-name")
-  albumNameElement.innerText = ""
   albumNameElement.innerText = album.title
+  // album image
   let albumImageElement = document.getElementById("album-img")
   albumImageElement.src = album.cover_big
+  // artist name
   let albumArtistElement = document.getElementById("album-artist")
-  albumArtistElement.innerText = ""
   albumArtistElement.innerText = album.artist.name
+  // small icon with artist image
+  let artistIcon = document.getElementById("artist-small-image")
+  artistIcon.src = album.artist.picture_small
+  // album year
+  let albumYear = document.getElementById("album-year")
+  let fullDate = album.release_date
+  let year = fullDate.substring(0, 4)
+  albumYear.innerText = year
+  // number of songs
+  let numberOfTracks = document.getElementById("number-of-tracks")
+  numberOfTracks.innerText = `${album.nb_tracks} songs, `
+  //  total album duration
+  let albumDuration = document.getElementById("album-duration")
+  let totalSeconds = album.duration
+  // checking if it it a number
+  console.log(typeof totalSeconds)
+
   loadTracks(album.title)
 }
 
@@ -76,7 +96,7 @@ const displayTracks = (tracks) => {
     <div class="track number">${index + 1}</div>
     <div class="track track-name">
         <div>${track.title}</div>
-        <div>Queen</div>
+        <div>${artistName}</div>
     </div>
     <div class="track duration">${track.duration}</div>
     `
@@ -88,8 +108,26 @@ window.onload = () => {
   //   testing with the bohemian rhapsody album
   const albumId = 75621062
   loadAlbum(albumId)
+  // backgroundColor()
 
   //   const urlParams = new URLSearchParams(window.location.search)
   //   const albumId = urlParams.get("id")
   //   loadAlbum(albumId)
 }
+
+// to get the background colour to change with each image
+
+// const backgroundColor = () => {
+//   const colorThief = new ColorThief()
+//   const img = document.querySelector("#album-img")
+
+//   // Make sure image is finished loading
+//   if (img.complete) {
+//     let myColor = colorThief.getColor(img)
+//     console.log(myColor)
+//   } else {
+//     image.addEventListener("load", function () {
+//       colorThief.getColor(img)
+//     })
+//   }
+// }
