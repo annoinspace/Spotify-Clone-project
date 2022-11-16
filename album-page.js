@@ -68,6 +68,7 @@ const displayAlbum = (album) => {
   let minutes = Math.floor((totalSeconds - hours * 3600) / 60)
   console.log(minutes)
   albumDuration.innerText = " " + ` ${hours} hr ${minutes} min`
+  // finally load the tracks
   loadTracks(album.title)
 }
 
@@ -99,14 +100,11 @@ const displayTracks = (tracks) => {
     const trackDuration = track.duration
 
     let trackMinutes = Math.floor(trackDuration / 60)
-    console.log(trackMinutes)
     let remainingSeconds = trackDuration % 60
 
     if (remainingSeconds < 10) {
       return String(remainingSeconds).padStart("0")
     }
-
-    console.log(remainingSeconds)
 
     // create the new track
     let trackElement = document.createElement("div")
@@ -114,7 +112,7 @@ const displayTracks = (tracks) => {
     trackElement.innerHTML = `
     <div class="track number">${index + 1}</div>
     <div class="track track-name">
-        <div>${track.title}</div>
+        <div class="cursor">${track.title}</div>
         <div>${artistName}</div>
     </div>
     <div class="track duration">${trackMinutes}:${remainingSeconds}</div>
@@ -122,6 +120,8 @@ const displayTracks = (tracks) => {
     albumContentElement.appendChild(trackElement)
   })
 }
+
+// playButton.classList.toggle("hidden")
 
 window.onload = () => {
   //   testing with the bohemian rhapsody album
@@ -134,6 +134,13 @@ window.onload = () => {
   //   loadAlbum(albumId)
 }
 
+// play button toggle
+
+const playpause = document.querySelector(".playpause")
+
+playpause.addEventListener("click", () => {
+  playpause.classList.toggle("playing")
+})
 // to get the background colour to change with each image
 
 // const backgroundColor = () => {

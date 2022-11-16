@@ -21,11 +21,16 @@
   box-sizing: border-box;
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   height: 100vh width 100vw;
   color: white;
   background-color: #121212;
   font-family: GothamBook;
+  user-select: none;
 }
 
 .icon-white {
@@ -65,6 +70,10 @@ body {
 }
 .border {
   border: 1px solid white;
+}
+
+.cursor {
+  cursor: pointer;
 }
 
 #spotify-logo {
@@ -236,6 +245,53 @@ hr {
 
 #currently-playing-img {
   width: 100%;
+}
+
+#playButtonBottom {
+  background-color: pink;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.playpause {
+  padding: 15px;
+  border: 1px solid green;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.playpause .button {
+  width: 20px;
+  height: 20px;
+  background: #f0f0f0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: inherit;
+  clip-path: polygon(
+    0 0,
+    50% 25%,
+    50% 75%,
+    50% 75%,
+    50% 25%,
+    100% 50%,
+    100% 50%,
+    0 100%
+  );
+}
+.playpause.playing .button {
+  clip-path: polygon(
+    0 0,
+    40% 0,
+    40% 100%,
+    60% 100%,
+    60% 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
 }
 
 .progress-wrapper {
