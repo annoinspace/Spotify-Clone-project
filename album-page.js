@@ -159,8 +159,6 @@ function changeTrack(event) {
     )
       .then((response) => response.json())
       .then((response) => {
-        console.log(response)
-        console.log(response.data[0])
         console.log(response.data[0].album.cover_xl)
         img.src = response.data[0].album.cover
         audioElement.src = response.data[0].preview
@@ -230,13 +228,13 @@ function pauseSong() {
 }
 window.onload = () => {
   //   testing with the bohemian rhapsody album
-  const albumId = 75621062
-  loadAlbum(albumId)
+  // const albumId = 75621062
+  // loadAlbum(albumId)
   // backgroundColor()
 
-  //   const urlParams = new URLSearchParams(window.location.search)
-  //   const albumId = urlParams.get("id")
-  //   loadAlbum(albumId)
+  const urlParams = new URLSearchParams(window.location.search)
+  const albumId = urlParams.get("albumId")
+  loadAlbum(albumId)
 }
 // playpause.addEventListener("click", () => {
 //   playpause.classList.toggle("playing")
