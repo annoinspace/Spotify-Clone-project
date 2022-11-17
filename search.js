@@ -20,7 +20,7 @@ async function getSongs() {
 }
 
 window.onload = async () => {
-  searchInput.value = "queen"
+  searchInput.value = "la vida"
   const listOfSearch = await getSongs()
   console.log(listOfSearch)
   loadPage(listOfSearch)
