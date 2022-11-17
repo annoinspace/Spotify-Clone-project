@@ -1,6 +1,8 @@
+let artistSelected = "disturbed";
+
 const getArtist = async () => {
   let res = await fetch(
-    "https://striveschool-api.herokuapp.com/api/deezer/artist/queen"
+    `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistSelected}`
   );
 
   let artist = await res.json();
@@ -11,6 +13,15 @@ const getArtist = async () => {
   console.log(name);
   let listeners = artist.nb_fan;
   console.log(listeners);
+
+  let h1 = document.querySelector("h1");
+  h1.innerText = name;
+
+  let views = document.querySelector(".lead");
+  views.innerText = `${listeners} monthly listeners`;
+
+  let jumbophoto = document.querySelector(".jumbotron-fluid");
+  jumbophoto.style.backgroundImage = `url(${photo})`;
 
   /* let firstSection = document.querySelector("#firstSection");
   console.log(firstSection);
