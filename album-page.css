@@ -487,3 +487,32 @@ input[type="range"]:focus::-ms-fill-lower {
 input[type="range"]:focus::-ms-fill-upper {
   background: #b6b6b6;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4d4d4d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #808080;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-body-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .navigation-container {
+    height: 10vh;
+  }
+  #jumbotron-album-content {
+    display: flex;
+  }
+}
