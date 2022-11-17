@@ -39,6 +39,12 @@ body {
   margin-inline: 20px;
 }
 
+.icon-white-medium {
+  font-size: 1.54em;
+  color: rgb(255, 255, 255);
+  margin-inline: 20px;
+}
+
 .icon-white-large {
   font-size: 2em;
   color: rgb(255, 255, 255);
@@ -341,6 +347,27 @@ hr {
   border-radius: 2px;
   color: white;
 }
+
+.bi-display {
+  position: relative;
+  left: 15px;
+}
+
+#volume {
+  display: inline-block;
+  width: 90px;
+  height: 4px;
+  background-color: #ffffff;
+  text-align: center;
+  line-height: 5px;
+  border-radius: 2px;
+  color: white;
+}
+
+#speaker {
+  background-color: #191919;
+}
+
 ion-icon {
   font-size: 25px;
 }

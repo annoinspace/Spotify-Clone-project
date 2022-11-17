@@ -139,13 +139,13 @@
             <div class="d-flex justify-content-start align-items-center">
               <span> <i class="bi bi-shuffle icon-white cursor"></i></span>
               <span>
-                <i class="bi bi-skip-start-fill icon-white cursor"></i
+                <i id="prev" class="bi bi-skip-start-fill icon-white cursor"></i
               ></span>
               <span id="playButtonBottom" class="playpause"
                 ><div class="button"></div
               ></span>
               <span>
-                <i class="bi bi-skip-end-fill icon-white cursor"></i
+                <i id="next" class="bi bi-skip-end-fill icon-white cursor"></i
               ></span>
               <span> <i class="bi bi-arrow-repeat icon-white cursor"></i></span>
             </div>
@@ -162,7 +162,13 @@
             </div>
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center">
-            EXTRA ICONS
+            <span class="m-2"><i class="bi bi-list icon-white-small cursor"></i></span>
+            <span class="m-2"><i class="bi bi-display icon-white-small cursor"></i>
+              <i id="speaker" class="bi bi-speaker icon-white-small cursor"></i></span>
+           <span class="m-2 d-flex justify-content-center align-items-center">
+            <span>  <i class="bi bi-volume-up icon-white-small cursor"></i></span>
+          
+            <span id="volume" class="m-1"></span></span>
           </div>
         </div>
       </div>
