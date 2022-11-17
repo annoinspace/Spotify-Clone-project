@@ -122,13 +122,17 @@ const displayTracks = (tracks) => {
   })
 }
 
+let interval
+let width = 0
+
 let audioElement = document.getElementById("audio")
 audioElement.src = ""
 let audioDurationSeconds = ""
 
 function changeTrack(event) {
   clearInterval(interval)
-
+  width = 0
+  elem.style.width = width + "%"
   let track = event.target
   let currentTrack = track.innerText
   console.log(currentTrack)
@@ -191,14 +195,12 @@ playpause.addEventListener("click", () => {
     playSong()
   }
 })
-let interval
-let width = 0
+
+let elem = document.getElementById("trackProgressElapsed")
 function playSong() {
   musicContainer.classList.add("play")
 
   function play() {
-    let elem = document.getElementById("trackProgressElapsed")
-
     clearInterval(interval)
     interval = setInterval(frame, audioDurationSeconds)
 
