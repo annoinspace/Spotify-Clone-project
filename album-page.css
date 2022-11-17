@@ -21,7 +21,7 @@
   box-sizing: border-box;
 }
 
-.hidden {
+.display-none {
   display: none;
 }
 
@@ -307,6 +307,7 @@ body {
 
 hr {
   border: 1px solid white;
+  opacity: 40%;
 }
 
 .flex-center {
@@ -572,9 +573,104 @@ input[type="range"]:focus::-ms-fill-upper {
     flex-direction: column;
   }
   .navigation-container {
-    height: 10vh;
+    height: 7vh;
+  }
+  #spotify-logo {
+    height: 65px;
+    padding: 15px 65px 15px 15px;
+  }
+
+  .arrow-forward {
+    display: none;
+  }
+  #album-nav-top {
+    height: 40px;
   }
   #jumbotron-album-content {
     display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+  #jumbotron-album-img {
+    position: relative;
+    top: -20px;
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 200px;
+    min-height: 200px;
+    justify-content: center;
+    align-items: center;
+  }
+  #album-jumbotron {
+    height: 30vh;
+  }
+  #jumbotron-text {
+    margin-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #album-name {
+    font-size: 1em;
+  }
+
+  #small-jumbotron-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  #album-artist {
+    width: 80vw;
+  }
+
+  #album-artist + .bi,
+  h5,
+  #album-year + .bi,
+  .bi-window-fullscreen,
+  .bi-skip-start-fill,
+  .bi-skip-end-fill,
+  .bi-arrow-repeat,
+  span > .bi-shuffle,
+  #number-of-tracks,
+  #album-duration,
+  .progress-wrapper,
+  #time-elapsed,
+  #total-time,
+  .bi-list,
+  .bi-volume-up,
+  #monitor,
+  #speaker,
+  #volume {
+    display: none;
+  }
+
+  .display-none {
+    display: flex;
+  }
+  .bi-shuffle {
+    order: 2;
+    margin-left: 40vw;
+  }
+  #greenPlay {
+    order: 3;
+  }
+
+  #table-title {
+    display: none;
+  }
+
+  .dropdown {
+    position: relative;
+    top: -85px;
+  }
+  hr {
+    display: none;
+  }
+  #currently-playing {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+  }
+  #small-icons-right {
+    display: none;
   }
 }
