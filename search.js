@@ -85,7 +85,7 @@ let loadPage = function (listOfSearch) {
 
   for (i = 0; i < 6; i++) {
     artistSearch.innerHTML += `
-    <a class="col-2" href="artist.html?q=${listOfSearch.data[i].artist.id}"><div class="col-12"> <div class="searchCard" id="findArtist"><img class="cardImage" src=${listOfSearch.data[i].artist.picture_medium}>
+    <a class="col-2" href="artist-page.html?artistId=${listOfSearch.data[i].artist.id}"><div class="col-12"> <div class="searchCard" id="findArtist"><img class="cardImage" src=${listOfSearch.data[i].artist.picture_medium}>
 <h5>${listOfSearch.data[i].artist.name}</h5>
 <p>Artist</p>
 </div></div> </a>`
