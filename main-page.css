@@ -6,6 +6,10 @@
   font-family: "GothamBold";
   src: url(fonts/Gotham-Bold.otf);
 }
+@font-face {
+  font-family: "GothamBook";
+  src: url(fonts/GothamBook.ttf);
+}
 body {
   background-color: #121212;
   background: linear-gradient(
@@ -19,6 +23,7 @@ body {
   overflow: auto;
   overflow-x: hidden;
   background-attachment: fixed;
+  font-family: GothamBook;
 }
 
 /*SIDEBAR SECTION*/
@@ -175,8 +180,7 @@ hr {
   font-family: "GothamBlack";
   border: none;
   border-radius: 30px;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 5px;
   margin-top: 2vh;
   margin-right: 2vw;
 }
@@ -189,8 +193,11 @@ hr {
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 65px;
+  left: -10px;
   background-color: #282828;
-  min-width: 160px;
+  border-radius: 10px;
+  min-width: 180px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   font-family: "GothamBold";
@@ -327,7 +334,6 @@ footer {
   width: 0px;
   box-shadow: -200px 0 0 200px #007bff;
 }
-
 
 /* end of main section */
 
@@ -574,7 +580,6 @@ input[type="range"]:focus::-ms-fill-lower {
 input[type="range"]:focus::-ms-fill-upper {
   background: #b6b6b6;
 }
-=======
 .playerimg {
   height: 7vh;
   margin-left: 20px;
@@ -606,4 +611,3 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 /* End Footer */
 /*BUILDING MOBILE RESPONSIVE VIEW*/
-
