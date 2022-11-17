@@ -19,7 +19,6 @@ body {
     rgba(8, 19, 172, 1) 100%
   );
   background-size: cover;
-  height: 91vh;
   overflow: auto;
   overflow-x: hidden;
   background-attachment: fixed;
@@ -31,6 +30,7 @@ body {
   flex-flow: column nowrap;
   align-items: flex-start;
   background-color: black;
+  z-index: 1;
 }
 
 #navbarNavAltMarkup {
@@ -101,8 +101,8 @@ ul {
 hr {
   border: 0;
   border-top: 1px solid #80828d;
-  width: 180px;
-  margin-left: 1vw;
+  width: 13vw;
+  margin-left: 0.5vw;
 }
 
 .playlists {
@@ -110,7 +110,7 @@ hr {
   width: 13vw;
   cursor: pointer;
   overflow-y: scroll;
-  height: 58vh;
+  height: 51vh;
 }
 
 .playlist-link {
@@ -240,13 +240,12 @@ hr {
   transition: 0.4s;
 }
 
-.mainPage {
-  overflow-y: auto;
-}
-
 main {
   padding: 2rem;
   color: #dedee0;
+  height: 85.33vh;
+  overflow-y: auto;
+  z-index: 1;
 }
 /* Footer */
 footer {
@@ -371,6 +370,7 @@ footer {
   bottom: 0px;
   margin: 0;
   color: white;
+  z-index: 2;
 }
 
 #currently-playing-img-container {
@@ -495,7 +495,7 @@ ion-icon {
 
 input[type="range"] {
   height: 5px;
-  -webkit-appearance: none;
+  appearance: none;
   margin: 10px 0;
   width: 100%;
 }
@@ -518,7 +518,7 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
   background: #dadada;
   cursor: pointer;
-  -webkit-appearance: none;
+  appearance: none;
   margin-top: -3px;
 }
 input[type="range"]:focus::-webkit-slider-runnable-track {
