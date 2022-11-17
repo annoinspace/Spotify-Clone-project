@@ -116,21 +116,34 @@ const displayTracks = (tracks) => {
         <div class="cursor" onclick="changeTrack(event)">${track.title}</div>
         <div>${artistName}</div>
     </div>
-    <div class="track-duration" class="track">${trackMinutes}:${remainingSeconds}</div>
+    <div class="track-duration track">${trackMinutes}:${remainingSeconds}</div>
     `
     albumContentElement.appendChild(trackElement)
   })
 }
 
+let interval
+let width = 0
+
 let audioElement = document.getElementById("audio")
 audioElement.src = ""
 let audioDurationSeconds = ""
 
+// let previousHighlightedRow =
+//   track.parentNode.parentNode.previousSibling
+// previousHighlightedRow.classList.remove("current-track")
+
 function changeTrack(event) {
   clearInterval(interval)
-
+  width = 0
+  elem.style.width = width + "%"
+  removeClasses()
   let track = event.target
+
   let currentTrack = track.innerText
+  let highlightedRow = track.parentNode.parentNode
+  highlightedRow.classList.add("current-track")
+
   console.log(currentTrack)
   // get the lower song bar container
   let currentTrackElement = document.getElementById("current-track")
@@ -175,6 +188,32 @@ function changeTrack(event) {
   getImageandTrack()
 }
 
+// let timeElapsedElement = document.getElementById("time-elapsed")
+// let n = 0
+
+var let = 1
+var timeElapsedElement = document.getElementById("time-elapsed")
+function start() {
+  setInterval(increase, 1000)
+}
+
+function increase() {
+  if (i < 100) {
+    i++
+    timeElapsedElement.innerText = i
+  }
+}
+
+function pause() {}
+
+const removeClasses = () => {
+  const tracksWithClass = document.querySelectorAll(".current-track")
+  console.log(tracksWithClass)
+  tracksWithClass.forEach((track) => {
+    track.classList.remove("current-track")
+  })
+}
+
 // play button toggle
 const musicContainer = document.getElementById("currently-playing")
 const playpause = document.querySelector(".playpause")
@@ -191,14 +230,12 @@ playpause.addEventListener("click", () => {
     playSong()
   }
 })
-let interval
-let width = 0
+
+let elem = document.getElementById("trackProgressElapsed")
 function playSong() {
   musicContainer.classList.add("play")
-
+  setTimeout(start, 1000)
   function play() {
-    let elem = document.getElementById("trackProgressElapsed")
-
     clearInterval(interval)
     interval = setInterval(frame, audioDurationSeconds)
 
@@ -236,6 +273,7 @@ window.onload = () => {
   // const albumId = urlParams.get("albumId")
   // loadAlbum(albumId)
 }
+
 // playpause.addEventListener("click", () => {
 //   playpause.classList.toggle("playing")
 
