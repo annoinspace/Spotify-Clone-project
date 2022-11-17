@@ -225,6 +225,19 @@ body {
 .table-row {
   display: flex;
 }
+.table-row-header {
+  display: flex;
+}
+
+.table-row:hover {
+  background-color: rgba(249, 249, 249, 0.2);
+  border-radius: 5px;
+}
+
+.current-track {
+  background-color: rgba(249, 249, 249, 0.3);
+  border-radius: 5px;
+}
 
 .title-header {
   flex-grow: 1;

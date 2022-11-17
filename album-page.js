@@ -116,7 +116,7 @@ const displayTracks = (tracks) => {
         <div class="cursor" onclick="changeTrack(event)">${track.title}</div>
         <div>${artistName}</div>
     </div>
-    <div class="track-duration" class="track">${trackMinutes}:${remainingSeconds}</div>
+    <div class="track-duration track">${trackMinutes}:${remainingSeconds}</div>
     `
     albumContentElement.appendChild(trackElement)
   })
@@ -129,12 +129,21 @@ let audioElement = document.getElementById("audio")
 audioElement.src = ""
 let audioDurationSeconds = ""
 
+// let previousHighlightedRow =
+//   track.parentNode.parentNode.previousSibling
+// previousHighlightedRow.classList.remove("current-track")
+
 function changeTrack(event) {
   clearInterval(interval)
   width = 0
   elem.style.width = width + "%"
+  removeClasses()
   let track = event.target
+
   let currentTrack = track.innerText
+  let highlightedRow = track.parentNode.parentNode
+  highlightedRow.classList.add("current-track")
+
   console.log(currentTrack)
   // get the lower song bar container
   let currentTrackElement = document.getElementById("current-track")
@@ -177,6 +186,13 @@ function changeTrack(event) {
   }
 
   getImageandTrack()
+}
+const removeClasses = () => {
+  const tracksWithClass = document.querySelectorAll(".current-track")
+  console.log(tracksWithClass)
+  tracksWithClass.forEach((track) => {
+    track.classList.remove("current-track")
+  })
 }
 
 // play button toggle
@@ -238,6 +254,7 @@ window.onload = () => {
   // const albumId = urlParams.get("albumId")
   // loadAlbum(albumId)
 }
+
 // playpause.addEventListener("click", () => {
 //   playpause.classList.toggle("playing")
 
