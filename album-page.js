@@ -311,8 +311,6 @@ window.onload = () => {
 //   }
 // })
 
-// let play = false
-
 // to get the background colour to change with each image
 
 // const backgroundColor = () => {
