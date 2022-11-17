@@ -228,13 +228,13 @@ function pauseSong() {
 }
 window.onload = () => {
   //   testing with the bohemian rhapsody album
-  // const albumId = 75621062
-  // loadAlbum(albumId)
+  const albumId = 75621062
+  loadAlbum(albumId)
   // backgroundColor()
 
-  const urlParams = new URLSearchParams(window.location.search)
-  const albumId = urlParams.get("albumId")
-  loadAlbum(albumId)
+  // const urlParams = new URLSearchParams(window.location.search)
+  // const albumId = urlParams.get("albumId")
+  // loadAlbum(albumId)
 }
 // playpause.addEventListener("click", () => {
 //   playpause.classList.toggle("playing")
