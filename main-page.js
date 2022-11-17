@@ -115,22 +115,6 @@ const fillPageSongs = function (listOfSongs) {
   }
 };
 
-/*const fillPageArtists = function (listOfArtists) {
-  secondRow.innerHTML = "";
-  for (i = 0; i < 8; i++) {
-    secondRow.innerHTML += `<a href="albums.html=q?${listOfArtists.data[i].album.id}>"<div class="albumCard">
-            <img
-              class="col-11"
-              src="${listOfArtists.data[i].artist.picture}"
-              alt=""
-            />
-            <div class="albumText">
-              <p>${listOfArtists.data[i].artist.name}</p>
-              </div>
-          </div></a>`;
-  }
-};*/
-
 const fillPageArtists = function (listOfArtists) {
   secondRow.innerHTML = "";
   for (i = 0; i < 8; i++) {
@@ -139,7 +123,7 @@ const fillPageArtists = function (listOfArtists) {
       <div class="card" id="darker">
         <img
           src="${listOfArtists.data[i].artist.picture}"
-          class="card-img-top p-2"
+          class="img-fluid card-img-top p-2"
           alt="..."
         />
         <div class="card-body">
