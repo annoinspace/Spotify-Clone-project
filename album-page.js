@@ -94,6 +94,7 @@ const loadTracks = (albumName) => {
 // then display all the tracks
 
 const displayTracks = (tracks) => {
+  console.log(tracks)
   let albumContentElement = document.getElementById("track-table-content")
   tracks.forEach((track, index) => {
     // make the time in the correct format
@@ -112,37 +113,167 @@ const displayTracks = (tracks) => {
     trackElement.innerHTML = `
     <div class="track number">${index + 1}</div>
     <div class="track track-name">
-        <div class="cursor">${track.title}</div>
+        <div class="cursor" onclick="changeTrack(event)">${track.title}</div>
         <div>${artistName}</div>
     </div>
-    <div class="track duration">${trackMinutes}:${remainingSeconds}</div>
+    <div class="track-duration" class="track">${trackMinutes}:${remainingSeconds}</div>
     `
     albumContentElement.appendChild(trackElement)
   })
 }
 
-const playTrack = (event) => {
-  event.target.classList.add("border")
-}
+let audioElement = document.getElementById("audio")
+audioElement.src = ""
+let audioDurationSeconds = ""
 
-window.onload = () => {
-  //   testing with the bohemian rhapsody album
-  const albumId = 75621062
-  loadAlbum(albumId)
-  // backgroundColor()
+function changeTrack(event) {
+  clearInterval(interval)
 
-  //   const urlParams = new URLSearchParams(window.location.search)
-  //   const albumId = urlParams.get("id")
-  //   loadAlbum(albumId)
+  let track = event.target
+  let currentTrack = track.innerText
+  console.log(currentTrack)
+  // get the lower song bar container
+  let currentTrackElement = document.getElementById("current-track")
+  currentTrackElement.innerHTML = currentTrack
+  // change the artist based on the event target
+  let artist = track.nextElementSibling
+  console.log(artist.innerText)
+  let chosenArtist = artist.innerText
+  let artistElement = currentTrackElement.nextElementSibling
+  artistElement.innerText = chosenArtist
+
+  // change the track duration
+  let totalTrackDurationElement = document.getElementById("total-time")
+  let timeText = track.parentNode.nextElementSibling.innerHTML
+  console.log(timeText)
+  totalTrackDurationElement.innerText = timeText
+  // change the image and load the new track
+  let img = document.getElementById("currently-playing-img")
+
+  const getImageandTrack = () => {
+    fetch(
+      `https://striveschool-api.herokuapp.com/api/deezer/search?q=${chosenArtist}/${currentTrack}`,
+      {
+        method: "GET"
+      }
+    )
+      .then((response) => response.json())
+      .then((response) => {
+        console.log(response.data[0].album.cover_xl)
+        img.src = response.data[0].album.cover
+        audioElement.src = response.data[0].preview
+        console.log(audioElement.src)
+        audioDurationSeconds = response.data[0].duration
+        console.log(audioDurationSeconds)
+      })
+
+      .catch((err) => {
+        console.error(err)
+      })
+  }
+
+  getImageandTrack()
 }
 
 // play button toggle
-
+const musicContainer = document.getElementById("currently-playing")
 const playpause = document.querySelector(".playpause")
+const progressContainer = document.getElementById("trackProgress")
+const timeElapsed = document.getElementById("time-elapsed")
 
 playpause.addEventListener("click", () => {
   playpause.classList.toggle("playing")
+  const isPlaying = musicContainer.classList.contains("play")
+
+  if (isPlaying) {
+    pauseSong()
+  } else {
+    playSong()
+  }
 })
+let interval
+let width = 0
+function playSong() {
+  musicContainer.classList.add("play")
+
+  function play() {
+    let elem = document.getElementById("trackProgressElapsed")
+
+    clearInterval(interval)
+    interval = setInterval(frame, audioDurationSeconds)
+
+    function frame() {
+      if (width >= 100) {
+        width = 1
+        clearInterval(interval)
+      } else {
+        let increment = 100 / audioDurationSeconds
+        width += increment
+
+        elem.style.width = width + "%"
+      }
+    }
+  }
+  audio.play()
+  play()
+}
+function pauseSong() {
+  musicContainer.classList.remove("play")
+
+  audio.pause()
+  function pause() {
+    clearInterval(interval)
+  }
+  pause()
+}
+window.onload = () => {
+  //   testing with the bohemian rhapsody album
+  // const albumId = 75621062
+  // loadAlbum(albumId)
+  // backgroundColor()
+
+  const urlParams = new URLSearchParams(window.location.search)
+  const albumId = urlParams.get("albumId")
+  loadAlbum(albumId)
+}
+// playpause.addEventListener("click", () => {
+//   playpause.classList.toggle("playing")
+
+//   let isPlaying = playpause.classList.contains("playing")
+
+//   if (isPlaying) {
+//     pause()
+//   } else {
+//     play()
+//   }
+
+//   // playpause.classList.contains("playing") ? play() : pause()
+
+//   let interval
+//   let width = 1
+//   function play() {
+//     let elem = document.getElementById("trackProgressElapsed")
+
+//     clearInterval(interval)
+//     interval = setInterval(frame, 100)
+
+//     function frame() {
+//       if (width >= 100) {
+//         width = 1
+//         clearInterval(interval)
+//       } else {
+//         width++
+//         elem.style.width = width + "%"
+//       }
+//     }
+//   }
+
+//   function pause() {
+//     clearInterval(interval)
+//   }
+// })
+
+// let play = false
 
 // to get the background colour to change with each image
 
