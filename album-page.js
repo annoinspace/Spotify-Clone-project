@@ -187,6 +187,25 @@ function changeTrack(event) {
 
   getImageandTrack()
 }
+
+// let timeElapsedElement = document.getElementById("time-elapsed")
+// let n = 0
+
+var let = 1
+var timeElapsedElement = document.getElementById("time-elapsed")
+function start() {
+  setInterval(increase, 1000)
+}
+
+function increase() {
+  if (i < 100) {
+    i++
+    timeElapsedElement.innerText = i
+  }
+}
+
+function pause() {}
+
 const removeClasses = () => {
   const tracksWithClass = document.querySelectorAll(".current-track")
   console.log(tracksWithClass)
@@ -215,7 +234,7 @@ playpause.addEventListener("click", () => {
 let elem = document.getElementById("trackProgressElapsed")
 function playSong() {
   musicContainer.classList.add("play")
-
+  setTimeout(start, 1000)
   function play() {
     clearInterval(interval)
     interval = setInterval(frame, audioDurationSeconds)
