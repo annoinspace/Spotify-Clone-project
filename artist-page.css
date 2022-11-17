@@ -22,7 +22,7 @@ body {
 .page-content {
   flex-direction: column;
   height: 100vh;
-  background-color: #884343;
+  background-color: #151515;
   /*   background-color: #1db954; */
 }
 
@@ -48,43 +48,149 @@ body {
   padding: 25px 75px 25px 25px;
 }
 
-.padding-0 {
-  padding: 0;
-}
-
 /*-----------Jumbotron-------------*/
 
 .jumbotron-fluid {
-  background-image: url(https://www.rollingstone.com/wp-content/uploads/2018/06/queen-news-of-the-world-opener-c5bda6ed-0bdf-42c0-8d93-7b29ec5c4259.jpg);
+  background-image: url(https://e-cdns-images.dzcdn.net/images/artist/0b17b99897d17ceb7027ed57cdbb7044/1000x1000-000000-80-0-0.jpg);
   background-size: cover;
-  height: 35vh;
+  height: 37vh;
   background-position-y: -27vh;
+  margin-bottom: 1.5rem;
 }
 
 .artistDescription {
   position: relative;
   left: 0;
   bottom: 0;
-  padding-top: 115px;
+  padding-top: 10vh;
 }
 
-/*--------------Play botton------------*/
+.artistDescription h1 {
+  font-weight: 700;
+}
+
+.lead {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/*--------------Play button, Follow button------------*/
+
+.btnSection {
+  margin-left: 3vh;
+}
 
 .playBtn {
+  position: relative;
   background-color: #1db954;
   border-radius: 50%;
   height: 10vh;
   width: 10vh;
+  margin-left: 3vh;
+}
+
+.triangle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0px;
+  height: 0px;
+  margin: auto;
+  border-style: solid;
+  border-width: 14px 0 14px 20px;
+  border-color: transparent transparent transparent white;
+}
+
+.followBtn {
+  background: transparent;
+  color: white;
+  font-weight: 600;
+  border: 1px solid grey;
+  border-radius: 4px;
+  font-size: 13px;
+  padding: 3px 14px;
+}
+
+.followBtn:hover {
+  user-select: none;
+  color: white;
+  border: 1px solid white;
+}
+
+.dots {
+  color: grey;
+  font-size: 600;
+  margin-left: 20px;
+}
+
+.dots:hover {
+  color: white;
 }
 
 /*-----------------------Popular Section----------------*/
 
+.greyColor {
+  color: grey;
+}
+
+.popularSection {
+  margin-left: 3vh;
+}
+
 .popular {
-  border: 1px solid darkgray;
-  flex-grow: 3;
+  /* border: 1px solid pink; */
+  flex: 3;
 }
 
 .artistPick {
-  flex-grow: 1;
-  border: 1px solid darkgray;
+  /* border: 1px solid pink; */
+  flex: 1;
+}
+
+td img {
+  padding-right: 20px;
+}
+
+.hovering {
+  position: relative;
+  margin-bottom: 3px;
+  border-radius: 10px;
+  display: flex;
+  width: 98%;
+  justify-content: space-between;
+}
+
+.hovering:hover {
+  background-color: rgb(42, 42, 42);
+  display: flex;
+}
+
+.heart {
+  /* display: none; */
+  position: absolute;
+  right: 24%;
+}
+
+.dot {
+  /* display: none; */
+  position: absolute;
+  right: 8%;
+}
+/*--------------------------Artist Pick------------------------------*/
+
+.imagen {
+  height: 50px;
+  width: 50px;
+}
+
+.rest p,
+.rest span {
+  margin: 0;
+  font-size: 11px;
+}
+
+.rest img {
+  border-radius: 50%;
 }

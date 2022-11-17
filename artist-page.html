@@ -11,8 +11,14 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./artist-page.css" />
-    <title>Spotify Album Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+
+    <title>Spotify Artist Page</title>
   </head>
+
   <body>
     <div class="page-container">
       <div class="main-body-container">
@@ -21,70 +27,195 @@
           <img
             id="spotify-logo"
             src="./assets/Spotify_Logo_RGB_White.png"
-            alt="spotify logo"
+            alt="spotify_logo"
           />
         </div>
 
         <!-- main page content container -->
-        <div class="page-content flex-grow-1 d-flex">
+        <div class="page-content flex-grow-1 d-flex mb-5" id="firstSection">
           <div class="jumbotron padding-0 jumbotron-fluid">
             <div class="artistDescription container">
-              <h1 class="display-4">Queen</h1>
-              <p class="lead">Listeners</p>
+              <img
+                src="https://img.icons8.com/color/480/instagram-verification-badge.png"
+                alt=""
+                style="height: 25px"
+              />
+              <span>Verified Artist</span>
+              <h1 class="display-10">Queen</h1>
+              <p class="lead">37,120,733 monthly listeners</p>
             </div>
           </div>
 
-          <div>
-            <!---------Play btn------------->
-            <div>
-              <div class="playBtn"></div>
-            </div>
+          <!---------Play btn------------->
 
-            <!-------------Popular Section--------------------->
-            <div class="popularSection d-flex">
+          <div class="btnSection">
+            <!-- <div clas="greenBtn">
+              <div class="playBtn">
+                <div class="triangle"></div>
+              </div>
+            </div> -->
+
+            <a class="followBtn" style="text-decoration: none">FOLLOW</a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26px"
+              height="26px"
+              fill="currentColor"
+              class="bi bi-three-dots dots"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+              />
+            </svg>
+          </div>
+
+          <!-------------Popular Section--------------------->
+          <div>
+            <div class="popularSection d-flex mt-4">
               <div class="popular">
-                <p>Popular</p>
+                <p style="font-size: 20px"><strong>Popular</strong></p>
+
                 <table class="table table-borderless text-white">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
-                    </tr>
-                  </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
+                    <tr class="hovering">
+                      <th class="text-center greyColor" scope="row">1</th>
+                      <td>
+                        <img
+                          src="https://cdns-images.dzcdn.net/images/cover/9a20f8b2547cbb74635539c219de3a84/350x350.jpg"
+                          alt="queens"
+                          height="35vh"
+                        />
+                        Another one bites the dust
+                      </td>
+
+                      <td class="greyColor">1,013,238,772</td>
+                      <td><i class="bi bi-suit-heart heart"></i></td>
+
+                      <td class="greyColor">3:34</td>
+                      <td><i class="bi bi-three-dots dot"></i></td>
                     </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
+                    <tr class="hovering">
+                      <th class="text-center greyColor" scope="row">2</th>
+                      <td>
+                        <img
+                          src="https://cdns-images.dzcdn.net/images/cover/9a20f8b2547cbb74635539c219de3a84/350x350.jpg"
+                          alt="queens"
+                          height="35vh"
+                        />
+                        Another one bites the dust
+                      </td>
+
+                      <td class="greyColor">1,013,238,772</td>
+                      <td><i class="bi bi-suit-heart heart"></i></td>
+
+                      <td class="greyColor">3:34</td>
+                      <td><i class="bi bi-three-dots dot"></i></td>
                     </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td colspan="2">Larry the Bird</td>
-                      <td>@twitter</td>
+                    <tr class="hovering">
+                      <th class="text-center greyColor" scope="row">3</th>
+                      <td>
+                        <img
+                          src="https://cdns-images.dzcdn.net/images/cover/9a20f8b2547cbb74635539c219de3a84/350x350.jpg"
+                          alt="queens"
+                          height="35vh"
+                        />
+                        Another one bites the dust
+                      </td>
+
+                      <td class="greyColor">1,013,238,772</td>
+                      <td><i class="bi bi-suit-heart heart"></i></td>
+
+                      <td class="greyColor">3:34</td>
+                      <td><i class="bi bi-three-dots dot"></i></td>
+                    </tr>
+                    <tr class="hovering">
+                      <th class="text-center greyColor" scope="row">4</th>
+                      <td>
+                        <img
+                          src="https://cdns-images.dzcdn.net/images/cover/9a20f8b2547cbb74635539c219de3a84/350x350.jpg"
+                          alt="queens"
+                          height="35vh"
+                        />
+                        Another one bites the dust
+                      </td>
+
+                      <td class="greyColor">1,013,238,772</td>
+                      <td><i class="bi bi-suit-heart heart"></i></td>
+
+                      <td class="greyColor">3:34</td>
+                      <td><i class="bi bi-three-dots dot"></i></td>
+                    </tr>
+                    <tr class="hovering">
+                      <th class="text-center greyColor" scope="row">5</th>
+                      <td>
+                        <img
+                          src="https://cdns-images.dzcdn.net/images/cover/9a20f8b2547cbb74635539c219de3a84/350x350.jpg"
+                          alt="queens"
+                          height="35vh"
+                        />
+                        Another one bites the dust
+                      </td>
+
+                      <td class="greyColor">1,013,238,772</td>
+                      <td><i class="bi bi-suit-heart heart"></i></td>
+
+                      <td class="greyColor">3:34</td>
+                      <td><i class="bi bi-three-dots dot"></i></td>
+                    </tr>
+                    <tr class="hovering">
+                      <th class="text-center greyColor" scope="row">1</th>
+                      <td>
+                        <img
+                          src="https://cdns-images.dzcdn.net/images/cover/9a20f8b2547cbb74635539c219de3a84/350x350.jpg"
+                          alt="queens"
+                          height="35vh"
+                        />
+                        Another one bites the dust
+                      </td>
+
+                      <td class="greyColor">1,013,238,772</td>
+                      <td><i class="bi bi-suit-heart heart"></i></td>
+
+                      <td class="greyColor">3:34</td>
+                      <td><i class="bi bi-three-dots dot"></i></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
               <div class="artistPick">
-                <p>Artist Pick</p>
+                <p style="font-size: 20px"><strong>Artist pick</strong></p>
+                <div class="art d-flex">
+                  <div class="imagen">
+                    <img
+                      src="https://i.ebayimg.com/images/g/O3QAAOSwB9NiThfE/s-l640.jpg"
+                      alt=""
+                      height="50px"
+                      width="50px"
+                    />
+                  </div>
+                  <div class="rest ml-3">
+                    <img
+                      src="https://i.scdn.co/image/af2b8e57f6d7b5d43a616bd1e27ba552cd8bfd42"
+                      alt=""
+                      style="height: 17px"
+                      ;
+                    />
+                    <span class="greyColor">Posted by Queen</span>
+                    <p><strong> Queen best of </strong></p>
+                    <p class="greyColor">Playlist</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- current song bar container -->
+      <!-- current song bar co ntainer -->
 
       <div id="currently-playing"></div>
     </div>
+    <script src="./artist-page.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
