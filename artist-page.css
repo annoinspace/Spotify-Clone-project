@@ -196,3 +196,130 @@ td img {
 .rest img {
   border-radius: 50%;
 }
+
+/* FOR SONG PLAYER */
+#currently-playing {
+  height: 90px;
+  min-width: 100%;
+  border-top: 1px solid rgb(61, 61, 61);
+  background-color: #191919;
+  position: fixed;
+  bottom: 0px;
+  margin: 0;
+}
+
+#currently-playing-img-container {
+  margin: 0;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+#currently-playing-img {
+  margin: 0;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#playButtonBottom {
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+#current-track {
+  font-family: GothamBold;
+  font-size: 0.8em;
+}
+
+#current-track + div {
+  font-size: 0.8em;
+}
+
+.playpause {
+  padding: 12px;
+  border: 1px solid green;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.playpause .button {
+  width: 15px;
+  height: 15px;
+  background: #191919;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: inherit;
+  clip-path: polygon(
+    0 0,
+    50% 25%,
+    50% 75%,
+    50% 75%,
+    50% 25%,
+    100% 50%,
+    100% 50%,
+    0 100%
+  );
+}
+.playpause.playing .button {
+  clip-path: polygon(
+    0 0,
+    40% 0,
+    40% 100%,
+    60% 100%,
+    60% 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+.progress-wrapper {
+  width: 500px;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar-fill {
+  width: 10%;
+  height: 5px;
+  background-color: #797979;
+  border-radius: 2px;
+  transition: width 500ms ease-in-out;
+}
+#trackProgress {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#trackProgressElapsed {
+  width: 1%;
+  height: 5px;
+  background-color: #ffffff;
+  text-align: center;
+  line-height: 5px;
+  border-radius: 2px;
+  color: white;
+}
+
+#speaker {
+  background-color: black;
+  position: relative;
+  right: 8px;
+}
+
+#monitor {
+  position: relative;
+  left: 8px;
+}

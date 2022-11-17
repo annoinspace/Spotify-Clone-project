@@ -1,19 +1,19 @@
 // testing the api
 
-const testing = () => {
-  fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/75621062`, {
-    method: "GET"
-  })
-    .then((response) => response.json())
-    .then((album) => {
-      console.log(album)
-    })
-    .catch((err) => {
-      console.log(err)
-    })
-}
+// const testing = () => {
+//   fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/75621062`, {
+//     method: "GET"
+//   })
+//     .then((response) => response.json())
+//     .then((album) => {
+//       console.log(album)
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//     })
+// }
 
-testing()
+// testing()
 
 // fetch the album id
 
@@ -265,13 +265,13 @@ function pauseSong() {
 }
 window.onload = () => {
   //   testing with the bohemian rhapsody album
-  const albumId = 75621062
-  loadAlbum(albumId)
+  // const albumId = 75621062
+  // loadAlbum(albumId)
   // backgroundColor()
 
-  // const urlParams = new URLSearchParams(window.location.search)
-  // const albumId = urlParams.get("albumId")
-  // loadAlbum(albumId)
+  const urlParams = new URLSearchParams(window.location.search)
+  const albumId = urlParams.get("albumId")
+  loadAlbum(albumId)
 }
 
 // playpause.addEventListener("click", () => {
