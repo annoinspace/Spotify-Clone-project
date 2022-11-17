@@ -6,11 +6,16 @@
   font-family: "GothamBold";
   src: url(fonts/Gotham-Bold.otf);
 }
+@font-face {
+  font-family: "GothamBook";
+  src: url(fonts/GothamBook.ttf);
+}
 
 body {
   width: 91vw;
   height: 100vh;
   background-color: #000;
+  font-family: GothamBook;
 }
 
 /*SIDEBAR SECTION*/
