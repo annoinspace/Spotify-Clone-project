@@ -70,9 +70,9 @@ let loadPage = function (listOfSearch) {
   }
   for (i = 0; i < 6; i++) {
     albumSearch.innerHTML += `
-    <a class="col-2" href="album-page.html?albumId=${listOfSearch.data[0].album.id}"><div class="col-12"> <div class="searchCard"><img class="cardImage" src=${listOfSearch.data[0].album.cover_medium}>
-<h5>${listOfSearch.data[0].album.title}</h5>
-<p>${listOfSearch.data[0].artist.name}</p>
+    <a class="col-2" href="album-page.html?albumId=${listOfSearch.data[i].album.id}"><div class="col-12"> <div class="searchCard"><img class="cardImage" src=${listOfSearch.data[i].album.cover_medium}>
+<h5>${listOfSearch.data[i].album.title}</h5>
+<p>${listOfSearch.data[i].artist.name}</p>
 </div></div></a> `
   }
 
