@@ -628,3 +628,24 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 /* End Footer */
 /*BUILDING MOBILE RESPONSIVE VIEW*/
+@media only screen and (max-width: 600px) {
+  .navbar-collapse,
+  #right,
+  #left,
+  #currently-playing {
+    display: none;
+  }
+  .navbar {
+    background-color: transparent;
+  }
+  #sidebar {
+    max-height: 5vh;
+  }
+  #rowheight {
+  }
+
+  .dropdown {
+    position: relative;
+    top: -35px;
+  }
+}
