@@ -264,6 +264,13 @@ main {
   width: 8vw;
 }
 
+a {
+  color: white;
+}
+a:hover {
+  color: white;
+}
+
 /* Footer */
 footer {
   background-color: #191919;
