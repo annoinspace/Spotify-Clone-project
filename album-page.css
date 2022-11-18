@@ -255,6 +255,10 @@ body {
   background-color: rgba(18, 18, 18, 0.8);
 }
 
+.bi-heart:hover {
+  color: red;
+}
+
 #album-content {
   background-color: rgba(18, 18, 18, 0.4);
   flex-grow: 1;
