@@ -233,6 +233,10 @@ hr {
   transition: 0.4s;
 }
 
+#recentlyPlayed .col {
+  flex-grow: 0;
+}
+
 .card-title {
   font-weight: 600;
   font-family: "GothamBold";
