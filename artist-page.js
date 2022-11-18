@@ -1,4 +1,4 @@
-let artistSelected = "disturbed";
+let artistSelected = "muse";
 
 const getArtist = async () => {
   let res = await fetch(

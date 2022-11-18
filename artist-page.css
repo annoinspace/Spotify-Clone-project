@@ -40,7 +40,7 @@ body {
 .page-content {
   flex-direction: column;
   height: 100vh;
-  background-color: #151515;
+  background-image: linear-gradient(rgb(255, 145, 0), #252323a1, #121212);
   /*   background-color: #1db954; */
 }
 
