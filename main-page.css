@@ -249,7 +249,7 @@ hr {
   font-weight: 600;
   font-family: "GothamBold";
   width: 8vw;
-  margin-left: -1vw;
+  align-items: center;
   text-align: center;
 }
 .cart-text {
