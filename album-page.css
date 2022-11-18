@@ -296,7 +296,7 @@ body {
 }
 
 #track-table-content {
-  height: 42vh;
+  height: 39vh;
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -717,6 +717,7 @@ hr {
     flex-direction: column;
     justify-content: center;
     max-width: 100%;
+    overflow: visible;
   }
   .navigation-container {
     display: none;
@@ -820,8 +821,14 @@ hr {
   #table-title {
     display: none;
   }
+
+  #album-table {
+    overflow: auto;
+  }
   #track-table-content {
     margin-top: 30px;
+
+    overflow: auto;
   }
 
   .track-name > :first-child {
