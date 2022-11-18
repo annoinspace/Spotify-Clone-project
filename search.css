@@ -21,7 +21,7 @@ body {
 /*SIDEBAR SECTION*/
 .navbar.fixed-left {
   position: fixed;
-  top: 0;
+  top: -1em;
   left: 0;
   right: 0;
   bottom: 0;
@@ -40,6 +40,13 @@ body {
 .navbar-brand {
   font-family: "GothamBlack";
   color: white;
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
 }
 
 .navbar-brand:hover {
@@ -53,8 +60,8 @@ body {
 #navbar-logos {
   filter: invert(53%) sepia(7%) saturate(486%) hue-rotate(193deg)
     brightness(95%) contrast(85%);
-  width: 2vw;
-  height: 2vh;
+  width: 20px;
+  height: 20px;
   transition: 0.3s;
 }
 
@@ -71,27 +78,33 @@ body {
 .navbar.fixed-left .navbar-collapse .navbar-nav a:hover {
   color: white !important;
 }
-
+.navList {
+  margin-block: -1em;
+}
+#navbarNavAltMarkup {
+  padding-top: 2vh;
+}
 #liked-songs {
-  width: 17px;
+  width: 20px;
   filter: brightness(60%);
   transition: 0.3s;
-  margin-left: 0.4em;
 }
-
+#HomeSearchLibrary > li > a {
+  font-family: "GothamBold";
+}
 #liked-songs:hover {
   filter: brightness(100%);
-}
-
-.navbar.fixed-left .navbar-brand {
-  padding-top: 2vh;
-  padding-bottom: 3vh;
-  padding-left: 2vw;
 }
 
 ul {
   list-style-type: none;
   padding-left: 1vw;
+}
+dl,
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 header {
