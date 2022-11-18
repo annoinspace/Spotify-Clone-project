@@ -18,7 +18,7 @@
 // fetch the album id
 
 const loadAlbum = (albumId) => {
-  fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumI}`, {
+  fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`, {
     method: "GET",
   })
     .then((response) => response.json())
