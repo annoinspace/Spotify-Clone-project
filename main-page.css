@@ -231,6 +231,12 @@ hr {
   background-color: rgba(100, 100, 100, 0.301);
   border-radius: 5px;
   transition: 0.4s;
+  margin-right: 1em;
+  height: 15vh;
+}
+
+.sidetext {
+  display: contents;
 }
 
 #recentlyPlayed .col {
