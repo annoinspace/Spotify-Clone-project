@@ -64,6 +64,7 @@ body {
 .main-body-container {
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 }
 
 .page-content {
@@ -203,6 +204,7 @@ body {
 
 #album-name {
   font-family: GothamBold;
+  max-width: 90%;
 }
 
 #album-duration {
@@ -253,6 +255,10 @@ body {
   background-color: rgba(18, 18, 18, 0.8);
 }
 
+.bi-heart:hover {
+  color: red;
+}
+
 #album-content {
   background-color: rgba(18, 18, 18, 0.4);
   flex-grow: 1;
@@ -290,6 +296,13 @@ body {
   padding: 1vh;
   max-width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+
+#track-table-content {
+  height: 39vh;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .table-row {
@@ -342,6 +355,7 @@ hr {
 }
 
 #currently-playing {
+  z-index: 1;
   height: 90px;
   min-width: 100%;
   border-top: 1px solid rgb(61, 61, 61);
@@ -582,7 +596,7 @@ input[type="range"]:focus::-ms-fill-upper {
   flex-flow: column nowrap;
   align-items: flex-start;
   /* background-color: black;*/
-  z-index: 1;
+  z-index: 2;
 }
 
 #navbarNavAltMarkup {
@@ -681,7 +695,6 @@ hr {
   bottom: 2vh;
 }
 
-
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -708,6 +721,7 @@ hr {
     flex-direction: column;
     justify-content: center;
     max-width: 100%;
+    overflow: visible;
   }
   .navigation-container {
     display: none;
@@ -811,8 +825,14 @@ hr {
   #table-title {
     display: none;
   }
+
+  #album-table {
+    overflow: auto;
+  }
   #track-table-content {
     margin-top: 30px;
+
+    overflow: auto;
   }
 
   .track-name > :first-child {
