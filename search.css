@@ -264,3 +264,70 @@ h4 {
 #leftSearch {
   margin-left: 1em;
 }
+@media only screen and (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .main {
+    max-width: 100vw;
+  }
+  #margin {
+    position: absolute;
+    left: 11em;
+    top: 1em;
+  }
+  #signBar {
+    display: none;
+  }
+  .nav-container {
+    display: none;
+  }
+  .top {
+    display: inline-block;
+  }
+  h5 {
+    display: none;
+  }
+  p {
+    display: none;
+  }
+  img {
+    margin-left: 3.5em;
+    margin-block: 2em;
+  }
+  .spanText {
+    text-align: center;
+    width: max-content;
+  }
+  .patient {
+    margin-left: 4em;
+    position: absolute;
+    top: 6em;
+  }
+  #searchAlbums {
+    display: inline-block;
+    margin-left: 6em;
+  }
+  .searchCard {
+    width: 170px;
+    height: 163px;
+  }
+  .cardImage {
+    width: 100px;
+    margin-inline: auto;
+    margin-block: auto;
+  }
+  h4 {
+    margin-left: 6.5em;
+  }
+  #searchArtists {
+    display: inline-block;
+    margin-left: 6em;
+  }
+  svg {
+    display: none;
+  }
+}
