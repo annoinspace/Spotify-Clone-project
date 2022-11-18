@@ -185,6 +185,97 @@ hr {
 }
 
 /*-----------Jumbotron-------------*/
+.arrow {
+  background-color: rgba(18, 18, 18, 0.4);
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.arrow-back {
+  padding-right: 6px;
+}
+.arrow-forward {
+  padding-left: 6px;
+}
+
+.arrow:hover {
+  background-color: rgba(18, 18, 18, 0.8);
+}
+
+/*----------------------*/
+
+#album-nav-top {
+  margin: 0;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+}
+/* css for the user icon */
+.dropdown {
+  margin-left: auto;
+}
+.arrows-profile {
+  background-color: transparent;
+  margin-left: 0;
+  display: flex;
+}
+
+#profilepic,
+#pointerdown {
+  width: 20px;
+  height: 20px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+}
+
+.dropbtn {
+  background-color: black;
+  color: white;
+  font-family: "GothamBlack";
+  border: none;
+  border-radius: 30px;
+  padding: 5px;
+  margin-top: 2vh;
+  margin-right: 2vw;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 65px;
+  left: -10px;
+  background-color: #282828;
+  border-radius: 10px;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-family: "GothamBold";
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: #494949;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 .jumbotron-fluid {
   /* background-image: url(https://e-cdns-images.dzcdn.net/images/artist/0b17b99897d17ceb7027ed57cdbb7044/1000x1000-000000-80-0-0.jpg); */
