@@ -70,7 +70,7 @@ let topsidecards = document.querySelector("#topsidecards");
 let firstRow = document.querySelector("#recentlyPlayed");
 let secondRow = document.querySelector("#showsToTry");
 
-const fillPageAlbums = function (listOfSearchAlbums) {
+/*const fillPageAlbums = function (listOfSearchAlbums) {
   topsidecards.innerHTML = "";
   for (i = 0; i < 10; i++) {
     topsidecards.innerHTML += `<div class="col" id="top-buttons">
@@ -93,8 +93,20 @@ const fillPageAlbums = function (listOfSearchAlbums) {
   </div>
 </div>`;
   }
+};*/
+const fillPageAlbums = function (listOfSearchAlbums) {
+  topsidecards.innerHTML = "";
+  for (i = 0; i < 10; i++) {
+    topsidecards.innerHTML += `<a class=" background-card mb-3 " style="max-width: 540px" href="album-page.html?albumId=${listOfSearchAlbums.data[i].album.id}"<div class="sidecards col-2 row g-0">
+<img
+  class="col-4"
+  src="${listOfSearchAlbums.data[i].album.cover_medium}" class="img-fluid rounded-start aspect-ratio-one-to-one" style="width: 100%"
+  alt=""
+/>
+<p class="col-8 sidetext">${listOfSearchAlbums.data[i].album.title}</p>
+</div></a>`;
+  }
 };
-
 const fillPageSongs = function (listOfSongs) {
   firstRow.innerHTML = "";
   for (i = 0; i < 8; i++) {
