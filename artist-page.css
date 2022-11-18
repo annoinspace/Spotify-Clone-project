@@ -44,9 +44,127 @@ body {
   /*   background-color: #1db954; */
 }
 
-.navigation-container {
-  height: 100vh;
+/*SIDEBAR SECTION*/
+.navbar {
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  background-color: black;
+  z-index: 1;
 }
+
+#navbarNavAltMarkup {
+  padding-top: 4vh;
+}
+
+#logo {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+}
+
+.navbar-brand {
+  font-family: "GothamBlack";
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
+#HomeSearchLibrary > li > a {
+  font-family: "GothamBold";
+}
+
+#navbar-logos {
+  filter: invert(53%) sepia(7%) saturate(486%) hue-rotate(193deg)
+    brightness(95%) contrast(85%);
+  width: 20px;
+  height: 20px;
+  transition: 0.3s;
+}
+
+#navbar-logos:hover {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+}
+
+.navbar .navbar-collapse .navbar-nav a {
+  color: #80828d !important;
+  transition: 0.3s;
+}
+
+.navbar .navbar-collapse .navbar-nav a:hover {
+  color: white !important;
+}
+
+#liked-songs {
+  width: 20px;
+  filter: brightness(60%);
+  transition: 0.3s;
+}
+
+#liked-songs:hover {
+  filter: brightness(100%);
+}
+
+.navbar.fixed-left .navbar-brand {
+  padding-top: 2vh;
+  padding-bottom: 3vh;
+  padding-left: 2vw;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 1vw;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #80828d;
+  width: 13vw;
+  margin-left: 0.5vw;
+}
+
+.playlists {
+  margin-left: 1vw;
+  width: 13vw;
+  cursor: pointer;
+  overflow-y: scroll;
+  height: 51vh;
+}
+
+.playlist-link {
+  color: #80828d;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: 0.3s;
+}
+.playlist-link:hover {
+  color: white;
+}
+
+.navbar.fixed-left .navbar-collapse .navbar-nav #install-app {
+  position: absolute;
+  bottom: 2vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4d4d4d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #808080;
+}
+/* End of scrollbar */
 
 .border {
   border: 1px solid white;
