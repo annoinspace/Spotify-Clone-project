@@ -113,7 +113,9 @@ const displayTracks = (tracks) => {
     trackElement.innerHTML = `
     <div class="track number">${index + 1}</div>
     <div class="track track-name">
-        <div class="cursor" onclick="changeTrack(event)">${track.title}</div>
+        <div class="cursor track-title-text" onclick="changeTrack(event)">${
+          track.title
+        }</div>
         <div>${artistName}</div>
     </div>
     <div class="track-duration track">${trackMinutes}:${remainingSeconds}</div>
@@ -191,7 +193,7 @@ function changeTrack(event) {
 // let timeElapsedElement = document.getElementById("time-elapsed")
 // let n = 0
 
-var let = 1
+// var let = 1
 var timeElapsedElement = document.getElementById("time-elapsed")
 function start() {
   setInterval(increase, 1000)
