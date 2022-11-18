@@ -33,6 +33,14 @@ body {
   user-select: none;
 }
 
+a {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
 .icon-white {
   font-size: 1rem;
   color: rgb(255, 255, 255);
@@ -726,6 +734,10 @@ hr {
   .navigation-container {
     display: none;
   }
+
+  #album-nav-top {
+    width: 50px;
+  }
   #spotify-logo {
     display: none;
   }
@@ -735,7 +747,6 @@ hr {
   }
   #album-nav-top {
     height: 40px;
-    display: none;
   }
   #jumbotron-album-content {
     display: flex;
@@ -744,7 +755,7 @@ hr {
   }
   #jumbotron-album-img {
     position: relative;
-    top: 0px;
+    top: -30px;
     margin-right: auto;
     margin-left: auto;
     min-width: 200px;
@@ -796,7 +807,8 @@ hr {
   .bi-volume-up,
   #monitor,
   #speaker,
-  #volume {
+  #volume,
+  .dropdown {
     display: none;
   }
 
