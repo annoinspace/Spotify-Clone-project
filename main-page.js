@@ -110,7 +110,7 @@ const fillPageAlbums = function (listOfSearchAlbums) {
 const fillPageSongs = function (listOfSongs) {
   firstRow.innerHTML = "";
   for (i = 0; i < 8; i++) {
-    firstRow.innerHTML += `<div class="col">
+    firstRow.innerHTML += `<a href="album-page.html?albumId=${listOfSongs.data[i].album.id}"<div class="col">
     <div class="card" id="darker">
       <img
         src="${listOfSongs.data[i].album.cover_medium}"
@@ -130,7 +130,7 @@ const fillPageSongs = function (listOfSongs) {
 const fillPageArtists = function (listOfArtists) {
   secondRow.innerHTML = "";
   for (i = 0; i < 8; i++) {
-    secondRow.innerHTML += `
+    secondRow.innerHTML += `<a href="artist-page.html?artistId=${listOfArtists.data[i].artist.id}"
     <div class="col-xl-2">
       <div class="card" id="darker">
         <img
@@ -146,3 +146,4 @@ const fillPageArtists = function (listOfArtists) {
     `;
   }
 };
+
