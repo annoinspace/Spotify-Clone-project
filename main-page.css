@@ -261,6 +261,7 @@ main {
 }
 .card {
   margin-top: 2vh;
+  width: 8vw;
 }
 
 /* Footer */
