@@ -70,35 +70,35 @@ let topsidecards = document.querySelector("#topsidecards");
 let firstRow = document.querySelector("#recentlyPlayed");
 let secondRow = document.querySelector("#showsToTry");
 
-const fillPageAlbums = function (listOfSearch) {
+const fillPageAlbums = function (listOfSearchAlbums) {
   topsidecards.innerHTML = "";
   for (i = 0; i < 10; i++) {
-    topsidecards.innerHTML += `<a href="albums.html?q=${listOfSearch.data[i].album.id}><div class="col">
+    topsidecards.innerHTML += `<div class="col" id="top-buttons">
     <div class="background-card mb-3" style="max-width: 540px">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img
-            src="${listOfSearch.data[i].album.cover_medium}"
-            class="img-fluid rounded-start"
-            style="height: 100%; min-width: 100%"
-            alt="..."
-          />
-        </div>
-        <div class="col-md-8 d-flex align-items-center">
-          <div class="card-body">
-            <h5 class="card-title">${listOfSearch.data[i].album.title}</h5>
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+                src="${listOfSearchAlbums.data[i].album.cover_medium}"
+                class="img-fluid rounded-start aspect-ratio-one-to-one" style="width: 100%"
+                alt="..."
+              />
+          </div>
+          <div class="col-md-8 d-flex align-items-center">
+          <div class="card-body d-flex align-items-center justify-content-between">
+              <p class="card-title text-truncate">${listOfSearchAlbums.data[i].album.title}</p>
+              <a href="/Album/album.html?songId=${listOfSearchAlbums.data[i].album.id}"><i class="fa-solid fa-circle-play fa-2xl"></i></a>
           </div>
         </div>
-      </div>
     </div>
-  </div></a>`;
+  </div>
+</div>`;
   }
 };
 
 const fillPageSongs = function (listOfSongs) {
   firstRow.innerHTML = "";
   for (i = 0; i < 8; i++) {
-    firstRow.innerHTML += `<a href="artists.html?q=${listOfSongs.data[i].artist.id}>"<div class="col">
+    firstRow.innerHTML += `<div class="col">
     <div class="card" id="darker">
       <img
         src="${listOfSongs.data[i].album.cover_medium}"
@@ -111,14 +111,14 @@ const fillPageSongs = function (listOfSongs) {
         <p class="card-text">${listOfSongs.data[i].title}</p>
       </div>
     </div>
-  </div></a>`;
+  </div>`;
   }
 };
 
 const fillPageArtists = function (listOfArtists) {
   secondRow.innerHTML = "";
   for (i = 0; i < 8; i++) {
-    secondRow.innerHTML += `<a href="albums.html=q?${listOfArtists.data[i].album.id}>"
+    secondRow.innerHTML += `
     <div class="col-xl-2">
       <div class="card" id="darker">
         <img
@@ -131,6 +131,6 @@ const fillPageArtists = function (listOfArtists) {
         </div>
       </div>
     </div>
-    </a>`;
+    `;
   }
 };

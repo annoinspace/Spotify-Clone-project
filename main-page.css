@@ -225,6 +225,7 @@ hr {
 
 .greeting {
   font-weight: 600;
+  font-family: "GothamBlack";
 }
 .background-card {
   background-color: rgba(100, 100, 100, 0.301);
@@ -234,6 +235,13 @@ hr {
 
 .card-title {
   font-weight: 600;
+  font-family: "GothamBold";
+  width: 8vw;
+  margin-left: -1vw;
+  text-align: center;
+}
+.cart-text {
+  font-family: "GothamBlack";
 }
 #darker {
   background-color: rgba(48, 48, 48, 0.301);
@@ -247,6 +255,10 @@ main {
   overflow-y: auto;
   z-index: 1;
 }
+.card {
+  margin-top: 2vh;
+}
+
 /* Footer */
 footer {
   background-color: #191919;
