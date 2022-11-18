@@ -86,7 +86,7 @@ const fillPageAlbums = function (listOfSearchAlbums) {
           <div class="col-md-8 d-flex align-items-center">
           <div class="card-body d-flex align-items-center justify-content-between">
               <p class="card-title text-truncate">${listOfSearchAlbums.data[i].album.title}</p>
-              <a href="/Album/album.html?songId=${listOfSearchAlbums.data[i].album.id}"><i class="fa-solid fa-circle-play fa-2xl"></i></a>
+              <a href="album-page.html?songId=${listOfSearchAlbums.data[i].album.id}"><i class="fa-solid fa-circle-play fa-2xl"></i></a>
           </div>
         </div>
     </div>
