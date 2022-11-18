@@ -233,6 +233,7 @@ hr {
   transition: 0.4s;
   margin-right: 1em;
   height: 15vh;
+  margin-left: -0.9rem;
 }
 
 .sidetext {
